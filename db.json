@@ -1,0 +1,102 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Petar",
+      "lastName": "Petrovic",
+      "username": "pera91",
+      "password": "1111",
+      "email": "pera91@gmail.com",
+      "adress": "Vozdova 15",
+      "city": "Nis",
+      "phoneNumber": "+381645553333",
+      "gender": "M",
+      "admin": true
+    },
+    {
+      "id": 2,
+      "firstName": "Aleksandra",
+      "lastName": "Nikolic",
+      "username": "alex88",
+      "password": "8888",
+      "email": "alex88@gmail.com",
+      "adress": "Kneza Milosa 15",
+      "city": "Beograd",
+      "phoneNumber": "+381643339999",
+      "gender": "F",
+      "admin": false
+    },
+    {
+      "id": 3,
+      "firstName": "Milos",
+      "lastName": "Zivkovic",
+      "username": "misa80",
+      "password": "0000",
+      "email": "misa80@gmail.com",
+      "adress": "Zaplanjska 155",
+      "city": "Novi Sad",
+      "phoneNumber": "+381647779999",
+      "gender": "M",
+      "admin": false
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Cars",
+      "image": ""
+    },
+    {
+      "id": 2,
+      "name": "Home Appliances",
+      "image": ""
+    },
+    {
+      "id": 3,
+      "name": "Shoes",
+      "image": ""
+    },
+    {
+      "id": 4,
+      "name": "Wardrobe",
+      "image": ""
+    },
+    {
+      "id": 5,
+      "name": "Furniture",
+      "image": ""
+    }
+  ],
+
+  "ads": [
+    {
+      "id": 1,
+      "title": "Radio",
+      "description": "",
+      "price": 3500,
+      "image": "",
+      "likes": 5,
+      "categoryId": 2,
+      "userId": 2
+    },
+    {
+      "id": 2,
+      "title": "Sneakers",
+      "description": "",
+      "price": 2500,
+      "image": "",
+      "likes": 5,
+      "categoryId": 2,
+      "userId": 2
+    },
+    {
+      "title": "",
+      "description": "",
+      "price": 2500,
+      "image": "",
+      "likes": 5,
+      "categoryId": 2,
+      "userId": 2
+    }
+  ]
+}
