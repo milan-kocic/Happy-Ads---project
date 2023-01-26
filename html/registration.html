@@ -8,8 +8,66 @@
     <link rel="stylesheet" href="/styles/style.css" />
     <title>Registration</title>
   </head>
+  <body class="body-registration">
+    <div class="registration-container">
+      <form id="form" class="form">
+        <h2>Register with us</h2>
+        <div class="form-control">
+          <!-- <label for="first-name">First name</label> -->
+          <input type="text" name="" id="first-name" placeholder="First name" />
+          <small>Error message</small>
+        </div>
+        <div class="form-control">
+          <!-- <label for="last-name">Last name</label> -->
+          <input type="text" name="" id="last-name" placeholder="Last name" />
+          <small>Error message</small>
+        </div>
 
-  <body>
-    <h1>Hello</h1>
+        <div class="form-control">
+          <!-- <label for="email">Email</label> -->
+          <input type="email" name="" id="email" placeholder="Email" />
+          <small>Error message</small>
+        </div>
+        <div class="form-control">
+          <!-- <label for="username">Username</label> -->
+          <input type="text" name="" id="username" placeholder="Username" />
+          <small>Error message</small>
+        </div>
+        <div class="form-control">
+          <!-- <label for="password">Password</label> -->
+          <input type="password" name="" id="password" placeholder="Password" />
+          <small>Error message</small>
+        </div>
+        <div class="form-control">
+          <!-- <label for="adress">Adress</label> -->
+          <input type="text" name="" id="adress" placeholder="Adress" />
+          <small>Error message</small>
+        </div>
+        <div class="form-control">
+          <!-- <label for="city">City</label> -->
+          <input type="text" name="" id="city" placeholder="City" />
+          <small>Error message</small>
+        </div>
+        <div class="form-control">
+          <!-- <label for="phone">Phone</label> -->
+          <input type="tel" name="" id="phone" placeholder="Phone" />
+          <small>Error message</small>
+        </div>
+        <div class="form-control gender">
+          <label for="male">Male</label>
+          <input type="radio" name="gender" id="male" checked />
+          <label for="female">Female</label>
+          <input type="radio" name="gender" />
+        </div>
+        <div class="form-control admin">
+          <label for="admin">Administrator</label>
+          <input type="checkbox" name="admin" id="admin" />
+        </div>
+        <button id="btn-registration" class="btn btn-registration">
+          Register
+        </button>
+      </form>
+    </div>
+    <script src="/scripts/registration.js" type="module"></script>
   </body>
 </html>
