@@ -1,3 +1,6 @@
+//import { addNewUser } from './scripts/script';
+import { addNewUser } from './script.js';
+
 const form = document.getElementById('form');
 form.addEventListener('submit', registration);
 const firstNameInput = document.getElementById('first-name');
@@ -28,7 +31,6 @@ function checkFields(arrFields) {
   arrFields.forEach((element) => {
     if (element.value.trim() === '') {
       showError(element, `${getInputName(element)} is required.`);
-      return false;
     } else {
       showSucces(element);
     }
@@ -40,24 +42,22 @@ function checkLength(input, min, max) {
       input,
       `${getInputName(input)} must be at least ${min} characters.`
     );
-    return false;
   } else if (input.value.length > max) {
     showError(
       input,
       `${getInputName(input)} must be less than ${max} characters.`
     );
-    return false;
   } else {
     showSucces(input);
   }
 }
 
-function registration(e) {
+async function registration(e) {
   e.preventDefault();
+  const genderCheck = genderInput.checked ? 'M' : 'F';
   checkFields([
     firstNameInput,
     lastNameInput,
-    emailInput,
     emailInput,
     usernameInput,
     passwordInput,
@@ -66,6 +66,18 @@ function registration(e) {
     phoneInput,
   ]);
   checkLength(passwordInput, 5, 10);
-  console.log('kraj');
-  //window.open('/index.html', '_self');
+
+  await addNewUser(
+    firstNameInput.value,
+    lastNameInput.value,
+    emailInput.value,
+    usernameInput.value,
+    passwordInput.value,
+    adressInput.value,
+    cityInput.value,
+    phoneInput.value,
+    genderCheck,
+    adminCheck.checked
+  );
+  window.open('/index.html', '_self');
 }

@@ -100,7 +100,8 @@ body {
 /*******BUTTONS*********/
 
 .btn-first,
-.btn-registration {
+.btn-registration,
+.btn-login {
   box-shadow: 0px 1px 0px 0px #f0f7fa;
   background: linear-gradient(to bottom, #2fc59d 5%, #27daaa 100%);
   background-color: #2fc59d;
@@ -135,7 +136,8 @@ body {
   text-decoration: none;
 }
 .btn-first:hover,
-.btn-registration:hover {
+.btn-registration:hover,
+.btn-login:hover {
   background: linear-gradient(to bottom, #56d3b2 5%, #31fdc7 100%);
   background-color: #34d4aa;
 }
@@ -155,12 +157,14 @@ body {
   gap: 20px;
 }
 /***********************************************************************/
-/********REGISTRATION PAGE*********************************************/
+/********REGISTRATION AND LOGIN PAGE*********************************************/
 /**********************************************************************/
-.body-registration {
+.body-registration,
+.body-login {
   background-color: #fafafa;
 }
-.registration-container {
+.registration-container,
+.login-container {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -172,19 +176,32 @@ body {
   box-shadow: 0 2px 10px rgb(45, 113, 76, 0.3);
   width: 400px;
 }
+.login-container {
+  top: 40%;
+}
 .form {
   padding: 15px 30px;
   font-family: inherit;
 }
+.form-login {
+  padding: 30px 40px;
+}
+.form-login h2 {
+  margin-bottom: 30px;
+}
 .form h2 {
   margin-bottom: 10px;
   color: hsl(147, 43%, 31%);
+}
+.form-login h2 {
+  margin-bottom: 20px;
 }
 .form-control {
   margin-bottom: 1px;
   padding-bottom: 15px;
   position: relative;
 }
+
 /* .form-control label {
   color: #777;
 } */
@@ -204,10 +221,12 @@ input::-webkit-input-placeholder {
   font-size: 16px;
   display: block;
 }
-
 .form-control input:focus {
   outline: 0;
   border-color: #777;
+}
+.form-control .login input {
+  padding: 20px;
 }
 
 .gender,
@@ -217,9 +236,13 @@ input::-webkit-input-placeholder {
   justify-content: center;
   gap: 8px;
 }
-.btn-registration {
+.btn-registration,
+.btn-login {
   width: 100%;
   display: block;
+}
+.btn-login {
+  margin-top: 15px;
 }
 
 .form-control.success input {

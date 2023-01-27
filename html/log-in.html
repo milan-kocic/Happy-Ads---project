@@ -9,8 +9,23 @@
     <title>Log In</title>
   </head>
 
-  <body>
-    <h1>Hello</h1>
+  <body class="body-login">
+    <div class="login-container">
+      <form id="form" class="form form-login">
+        <h2>Log in</h2>
+        <div class="form-control">
+          <!-- <label for="username">Username</label> -->
+          <input type="text" name="" id="username" placeholder="Username" />
+          <small>Error message</small>
+        </div>
+        <div class="form-control">
+          <!-- <label for="password">Password</label> -->
+          <input type="password" name="" id="password" placeholder="Password" />
+          <small>Error message</small>
+        </div>
+        <button id="btn-login" class="btn btn-login">Log in</button>
+      </form>
+    </div>
     <script src="/scripts/log-in.js" type="module"></script>
   </body>
 </html>
