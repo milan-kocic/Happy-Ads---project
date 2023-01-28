@@ -14,6 +14,17 @@ const phoneInput = document.getElementById('phone');
 const genderInput = document.getElementById('male');
 const adminCheck = document.getElementById('admin');
 
+const inputFieldsArray = [
+  firstNameInput,
+  lastNameInput,
+  emailInput,
+  usernameInput,
+  passwordInput,
+  adressInput,
+  cityInput,
+  phoneInput,
+];
+
 function showError(input, message) {
   const formControl = input.parentElement;
   formControl.classList = 'form-control error';
@@ -27,57 +38,61 @@ function showSucces(input) {
 function getInputName(input) {
   return input.placeholder;
 }
+
 function checkFields(arrFields) {
+  let valid = true;
   arrFields.forEach((element) => {
     if (element.value.trim() === '') {
       showError(element, `${getInputName(element)} is required.`);
+      valid = false;
     } else {
       showSucces(element);
     }
   });
+  return valid;
 }
+
 function checkLength(input, min, max) {
+  let validLength = true;
   if (input.value.length < min) {
     showError(
       input,
       `${getInputName(input)} must be at least ${min} characters.`
     );
+    validLength = false;
   } else if (input.value.length > max) {
     showError(
       input,
       `${getInputName(input)} must be less than ${max} characters.`
     );
+    validLength = false;
   } else {
     showSucces(input);
   }
+  return validLength;
 }
 
 async function registration(e) {
   e.preventDefault();
   const genderCheck = genderInput.checked ? 'M' : 'F';
-  checkFields([
-    firstNameInput,
-    lastNameInput,
-    emailInput,
-    usernameInput,
-    passwordInput,
-    adressInput,
-    cityInput,
-    phoneInput,
-  ]);
-  checkLength(passwordInput, 5, 10);
+  const checkedFields = checkFields(inputFieldsArray);
+  const checkedLength = checkLength(passwordInput, 5, 10);
+  if (!checkedFields || !checkedLength) {
+    return;
+  } else {
+    await addNewUser(
+      firstNameInput.value,
+      lastNameInput.value,
+      emailInput.value,
+      usernameInput.value,
+      passwordInput.value,
+      adressInput.value,
+      cityInput.value,
+      phoneInput.value,
+      genderCheck,
+      adminCheck.checked
+    );
+  }
 
-  await addNewUser(
-    firstNameInput.value,
-    lastNameInput.value,
-    emailInput.value,
-    usernameInput.value,
-    passwordInput.value,
-    adressInput.value,
-    cityInput.value,
-    phoneInput.value,
-    genderCheck,
-    adminCheck.checked
-  );
   window.open('/index.html', '_self');
 }
