@@ -10,16 +10,20 @@
       rel="stylesheet"
       href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
     />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <title>Admin</title>
   </head>
   <body>
     <div class="dashboard-container">
-      <nav>
+      <nav class="side-navigation">
         <div>
           <a href="/index.html" class="navigation-logo"
             ><img
               class="logo-admin"
-              src="../image/logo/logo-no-background.png"
+              src="../image/logo/logo-black.png"
               alt="logo"
               srcset=""
           /></a>
@@ -28,20 +32,22 @@
           <ul class="nav-links">
             <li>
               <a href="#">
-                <i class="uil uil-estate"></i>
-                <span class="link-name">Dashboard</span>
+                <!-- <i class="uil uil-estate"></i> -->
+                <!-- <i class="bx bxs-user-detail"></i> -->
+                <i class="bx bxs-group"></i>
+                <span class="link-name">Users</span>
               </a>
             </li>
             <li>
               <a href="#">
                 <i class="uil uil-files-landscapes"></i>
-                <span class="link-name">Content</span>
+                <span class="link-name">Categories</span>
               </a>
             </li>
             <li>
               <a href="#">
                 <i class="uil uil-chart"></i>
-                <span class="link-name">Analytics</span>
+                <span class="link-name">Ads</span>
               </a>
             </li>
             <li>
@@ -65,7 +71,7 @@
           </ul>
         </div>
       </nav>
-      <section class="container-admin">
+      <section class="container-nav">
         <div class="admin-info">
           <p>Name</p>
           <p>Username</p>
@@ -73,9 +79,34 @@
           <p>Adress</p>
           <p>City</p>
           <p>Phone</p>
+          <p class="admin-img">
+            <img src="/image/admin-profile.jpg" alt="admin profile photo" />
+          </p>
+          <a href="#">
+            <i class="uil uil-signout"></i>
+            <span class="link-name">Logout</span>
+          </a>
         </div>
-        <div class="dashboard">
-          <div></div>
+      </section>
+      <section class="container-data">
+        <div class="user-data">
+          <div class="title-dashboard">
+            <i class="bx bxs-report"></i>
+            <span class="text">Users</span>
+          </div>
+          <table class="table" id="table">
+            <tr>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>User Name</th>
+              <th>Email</th>
+              <th>Adress</th>
+              <th>City</th>
+              <th>Phone</th>
+              <th>Gender</th>
+              <th>Admin</th>
+            </tr>
+          </table>
         </div>
       </section>
     </div>

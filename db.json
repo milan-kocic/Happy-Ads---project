@@ -38,6 +38,19 @@
       "phoneNumber": "+381647779999",
       "gender": "M",
       "admin": false
+    },
+    {
+      "firstName": "Slobodan",
+      "lastName": "Kocić",
+      "email": "sloba@gmail.com",
+      "username": "sloba91",
+      "password": "111111",
+      "adress": "Selicevica 7",
+      "city": "Niš",
+      "phoneNumber": "0646569656",
+      "gender": "M",
+      "admin": true,
+      "id": 4
     }
   ],
   "categories": [
