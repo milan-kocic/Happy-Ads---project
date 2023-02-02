@@ -1,33 +1,32 @@
 {
   "users": [
     {
-      "id": 1,
       "firstName": "Petar",
-      "lastName": "Petrovic",
+      "lastName": "Petrović",
       "username": "pera91",
       "password": "111111",
       "email": "pera91@gmail.com",
-      "adress": "Vozdova 15",
-      "city": "Nis",
-      "phoneNumber": "+381645553333",
-      "gender": "M",
-      "admin": true
+      "adress": "Sinđelićeva 1",
+      "city": "Niš",
+      "phoneNumber": "0641861991",
+      "gender": "F",
+      "admin": {},
+      "id": 1
     },
     {
-      "id": 2,
       "firstName": "Aleksandra",
       "lastName": "Nikolic",
       "username": "alex88",
-      "password": "888888",
+      "password": "111111",
       "email": "alex88@gmail.com",
       "adress": "Kneza Milosa 15",
       "city": "Beograd",
       "phoneNumber": "+381643339999",
       "gender": "F",
-      "admin": false
+      "admin": {},
+      "id": 2
     },
     {
-      "id": 3,
       "firstName": "Milos",
       "lastName": "Zivkovic",
       "username": "misa80",
@@ -36,20 +35,21 @@
       "adress": "Zaplanjska 155",
       "city": "Novi Sad",
       "phoneNumber": "+381647779999",
-      "gender": "M",
-      "admin": false
+      "gender": "F",
+      "admin": {},
+      "id": 3
     },
     {
       "firstName": "Slobodan",
       "lastName": "Kocić",
-      "email": "sloba@gmail.com",
       "username": "sloba91",
       "password": "111111",
+      "email": "sloba@gmail.com",
       "adress": "Selicevica 7",
       "city": "Niš",
       "phoneNumber": "0646569656",
-      "gender": "M",
-      "admin": true,
+      "gender": "F",
+      "admin": {},
       "id": 4
     }
   ],

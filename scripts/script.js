@@ -94,6 +94,48 @@ async function getUserById(id) {
   return user;
 }
 
+async function getUsers() {
+  const response = await fetch('http://localhost:3000/users', {
+    method: 'GET',
+  });
+  const products = await response.json();
+  return products;
+}
+async function updateUser(
+  id,
+  firstName,
+  lastName,
+  username,
+  password,
+  email,
+  adress,
+  city,
+  phoneNumber,
+  gender,
+  admin
+) {
+  const response = await fetch(`http://localhost:3000/users/${id}`, {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+
+    body: JSON.stringify({
+      firstName,
+      lastName,
+      username,
+      password,
+      email,
+      adress,
+      city,
+      phoneNumber,
+      gender,
+      admin,
+    }),
+  });
+  const product = await response.json();
+  return product;
+}
 export {
   checkFields,
   showError,
@@ -103,4 +145,6 @@ export {
   addNewUser,
   getUserByUsernameAndPass,
   getUserById,
+  getUsers,
+  updateUser,
 };
