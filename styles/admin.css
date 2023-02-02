@@ -114,6 +114,9 @@ nav {
 .hidden {
   display: none;
 }
+.hidden-categories {
+  display: none;
+}
 .table {
   text-align: center;
   font-family: inherit;
@@ -156,4 +159,8 @@ table th {
 .btn-style:hover {
   background: linear-gradient(to bottom, #56d3b2 5%, #31fdc7 100%);
   background-color: #34d4aa;
+}
+.image-class {
+  width: 350px;
+  height: 250px;
 }

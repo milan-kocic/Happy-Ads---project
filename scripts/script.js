@@ -150,6 +150,21 @@ async function updateUser(
   const product = await response.json();
   return product;
 }
+async function updateCategory(id, name, image) {
+  const response = await fetch(`http://localhost:3000/categories/${id}`, {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+
+    body: JSON.stringify({
+      name,
+      image,
+    }),
+  });
+  const product = await response.json();
+  return product;
+}
 async function getCategories() {
   const response = await fetch('http://localhost:3000/categories', {
     method: 'GET',
@@ -159,6 +174,13 @@ async function getCategories() {
 }
 async function deleteUser(id) {
   const response = await fetch(`http://localhost:3000/users/${id}`, {
+    method: 'DELETE',
+  });
+  const product = await response.json();
+  return product;
+}
+async function deleteCategory(id) {
+  const response = await fetch(`http://localhost:3000/categories/${id}`, {
     method: 'DELETE',
   });
   const product = await response.json();
@@ -179,4 +201,6 @@ export {
   deleteUser,
   addNewCategory,
   getCategories,
+  deleteCategory,
+  updateCategory,
 };
