@@ -44,7 +44,9 @@ function checkLength(input, min, max) {
   }
   return validLength;
 }
-// ASYNC FUNCTIONS
+//****************************************************/
+// ASYNC FUNCTIONS************************************/
+/*************************************************** */
 async function addNewUser(
   firstName,
   lastName,
@@ -71,6 +73,18 @@ async function addNewUser(
       phoneNumber,
       gender,
       admin,
+    }),
+  });
+  const user = await response.json();
+  return user;
+}
+async function addNewCategory(name, image) {
+  const response = await fetch(`http://localhost:3000/categories`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      name,
+      image,
     }),
   });
   const user = await response.json();
@@ -136,6 +150,21 @@ async function updateUser(
   const product = await response.json();
   return product;
 }
+async function getCategories() {
+  const response = await fetch('http://localhost:3000/categories', {
+    method: 'GET',
+  });
+  const categories = await response.json();
+  return categories;
+}
+async function deleteUser(id) {
+  const response = await fetch(`http://localhost:3000/users/${id}`, {
+    method: 'DELETE',
+  });
+  const product = await response.json();
+  return product;
+}
+
 export {
   checkFields,
   showError,
@@ -147,4 +176,7 @@ export {
   getUserById,
   getUsers,
   updateUser,
+  deleteUser,
+  addNewCategory,
+  getCategories,
 };

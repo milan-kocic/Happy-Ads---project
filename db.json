@@ -9,8 +9,8 @@
       "adress": "Sinđelićeva 1",
       "city": "Niš",
       "phoneNumber": "0641861991",
-      "gender": "F",
-      "admin": {},
+      "gender": "M",
+      "admin": true,
       "id": 1
     },
     {
@@ -21,9 +21,9 @@
       "email": "alex88@gmail.com",
       "adress": "Kneza Milosa 15",
       "city": "Beograd",
-      "phoneNumber": "+381643339999",
+      "phoneNumber": "0646658737\n",
       "gender": "F",
-      "admin": {},
+      "admin": true,
       "id": 2
     },
     {
@@ -34,23 +34,10 @@
       "email": "misa80@gmail.com",
       "adress": "Zaplanjska 155",
       "city": "Novi Sad",
-      "phoneNumber": "+381647779999",
-      "gender": "F",
-      "admin": {},
+      "phoneNumber": "0631523698",
+      "gender": "M",
+      "admin": false,
       "id": 3
-    },
-    {
-      "firstName": "Slobodan",
-      "lastName": "Kocić",
-      "username": "sloba91",
-      "password": "111111",
-      "email": "sloba@gmail.com",
-      "adress": "Selicevica 7",
-      "city": "Niš",
-      "phoneNumber": "0646569656",
-      "gender": "F",
-      "admin": {},
-      "id": 4
     }
   ],
   "categories": [
