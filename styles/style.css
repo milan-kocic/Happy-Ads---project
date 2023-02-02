@@ -101,7 +101,8 @@ body {
 
 .btn-first,
 .btn-registration,
-.btn-login {
+.btn-login,
+.btn-edit {
   box-shadow: 0px 1px 0px 0px #f0f7fa;
   background: linear-gradient(to bottom, #2fc59d 5%, #27daaa 100%);
   background-color: #2fc59d;
@@ -137,7 +138,8 @@ body {
 }
 .btn-first:hover,
 .btn-registration:hover,
-.btn-login:hover {
+.btn-login:hover,
+.btn-edit:hover {
   background: linear-gradient(to bottom, #56d3b2 5%, #31fdc7 100%);
   background-color: #34d4aa;
 }
@@ -160,11 +162,13 @@ body {
 /********REGISTRATION AND LOGIN PAGE*********************************************/
 /**********************************************************************/
 .body-registration,
-.body-login {
+.body-login,
+.body-edit {
   background-color: #fafafa;
 }
 .registration-container,
-.login-container {
+.login-container,
+.edit-container {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -176,14 +180,16 @@ body {
   box-shadow: 0 2px 10px rgb(45, 113, 76, 0.3);
   width: 400px;
 }
-.login-container {
+.login-container,
+.edit-container {
   top: 40%;
 }
 .form {
   padding: 15px 30px;
   font-family: inherit;
 }
-.form-login {
+.form-login,
+.form-edtit {
   padding: 30px 40px;
 }
 .form-login h2 {

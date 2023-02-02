@@ -49,4 +49,3 @@ async function registration(e) {
 
   window.open('/index.html', '_self');
 }
-export { checkFields };
