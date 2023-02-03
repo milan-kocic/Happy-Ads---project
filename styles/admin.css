@@ -43,13 +43,13 @@ nav {
   list-style: none;
 }
 .nav-links li > a {
-  padding: 12px 22px;
+  padding: 12px 11px;
   text-decoration: none;
   transition: all 0.2s ease-in;
 }
 .nav-links li:hover > a {
   background-color: #2f4f4f;
-  padding: 12px 22px;
+  padding: 12px 11px;
   border-radius: 6px;
   color: #fff;
 }
