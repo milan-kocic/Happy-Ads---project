@@ -6,10 +6,10 @@ import {
   getCategories,
   deleteCategory,
 } from './script.js';
-
+let osoba = 'Milan';
 const search = window.location.search;
 const part = search.split('=');
-const id = part[1];
+let id = part[1];
 
 async function loadData() {
   const user = await getUserById(id);
@@ -262,4 +262,14 @@ function showCategories(categories) {
   }
 }
 
+const btnAddCategory = document.getElementById('btn-add-category');
+btnAddCategory.addEventListener('click', function () {
+  window.open(`/html/category-add.html`, '_self');
+});
+const btnHome = document.getElementById('btn-home');
+btnHome.addEventListener('click', function () {
+  window.open(`../index.html`, '_self');
+});
+
 window.addEventListener('load', loadData);
+export { id };

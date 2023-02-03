@@ -38,6 +38,19 @@
       "gender": "M",
       "admin": false,
       "id": 3
+    },
+    {
+      "firstName": "Aleksandar",
+      "lastName": "Đorđević",
+      "email": "aca95@gmai.com",
+      "username": "aca95",
+      "password": "111111",
+      "adress": "Triglavska 15",
+      "city": "Subotica",
+      "phoneNumber": "0642352351",
+      "gender": "M",
+      "admin": false,
+      "id": 4
     }
   ],
   "categories": [

@@ -14,7 +14,7 @@ async function login(e) {
     usernameInput.value,
     passwordInput.value
   );
-  console.log(loggedInUser);
+
   const checkedLoginFields = checkFields(inputArray);
   if (!checkedLoginFields) {
     return;
