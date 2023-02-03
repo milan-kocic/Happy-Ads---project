@@ -172,6 +172,14 @@ async function getCategories() {
   const categories = await response.json();
   return categories;
 }
+
+async function getCategoryById(id) {
+  const response = await fetch(`http://localhost:3000/categories/${id}`, {
+    method: 'GET',
+  });
+  const user = await response.json();
+  return user;
+}
 async function deleteUser(id) {
   const response = await fetch(`http://localhost:3000/users/${id}`, {
     method: 'DELETE',
@@ -203,4 +211,5 @@ export {
   getCategories,
   deleteCategory,
   updateCategory,
+  getCategoryById,
 };

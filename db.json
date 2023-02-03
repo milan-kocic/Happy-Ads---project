@@ -42,9 +42,9 @@
   ],
   "categories": [
     {
-      "id": 1,
       "name": "Cars",
-      "image": "https://imgd-ct.aeplcdn.com/370x208/n/cw/ec/106257/venue-exterior-right-front-three-quarter-2.jpeg?isig=0&q=75"
+      "image": "https://imgd-ct.aeplcdn.com/370x208/n/cw/ec/106257/venue-exterior-right-front-three-quarter-2.jpeg?isig=0&q=75",
+      "id": 1
     },
     {
       "id": 2,

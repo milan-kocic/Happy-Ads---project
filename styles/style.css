@@ -271,3 +271,46 @@ input::-webkit-input-placeholder {
 .form-control.error small {
   visibility: visible;
 }
+/*********************************************************/
+/******************CATEGORIES**********************/
+/********************************************************/
+/* 
+.category-select {
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  padding: 7px;
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: inherit;
+  line-height: inherit;
+  outline: none;
+  color: hsl(147, 19%, 25%);
+  grid-area: select;
+}
+.category-div-select {
+  width: 100%;
+  border: 2px solid rgba(105, 221, 157, 0.712);
+  border-radius: 4px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #fff;
+  background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
+  display: grid;
+  grid-template-areas: 'select';
+  align-items: center;
+}
+
+.category-div-select::after {
+  content: '';
+  width: 0.8em;
+  height: 0.5em;
+  background-color: rgba(105, 221, 157, 0.712);
+  clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+  display: grid;
+  grid-area: select;
+  justify-self: self-end;
+} */

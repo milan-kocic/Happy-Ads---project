@@ -112,8 +112,7 @@ function showUsers(users) {
       tdAdress.classList = 'update-data';
       tdCity.classList = 'update-data';
       tdPhone.classList = 'update-data';
-      if (user.gender === 'M') {
-        console.log(user.gender);
+      if (tdGender.innerHTML === 'M') {
         tdGender.innerHTML = `<label for="gender">M</label>
           <input type="radio" name="gender" id="gender" checked />
           <label for="gender">F</label>
@@ -127,15 +126,10 @@ function showUsers(users) {
           <input type="radio" name="gender" checked/>`;
         tdGender.classList = 'update-data';
       }
-
-      if (user.admin) {
-        tdAdmin.innerHTML = `<input type="checkbox" name="admin" id="admin" checked/>`;
-        tdAdmin.classList = 'update-data';
-      } else {
-        tdAdmin.innerHTML = `<input type="checkbox" name="admin" id="admin" />`;
-        tdAdmin.classList = 'update-data';
-      }
-
+      tdAdmin.innerHTML = `<input type="checkbox" name="admin" id="admin" ${
+        tdAdmin.innerHTML === '✔️' ? 'checked' : ''
+      } />`;
+      tdAdmin.classList = 'update-data';
       const genderCheck = document.getElementById('gender');
       const adminCheck = document.getElementById('admin');
 
@@ -220,6 +214,7 @@ function showUsers(users) {
 // }
 
 const tableCategories = document.getElementById('table-categories');
+
 const btnCategories = document.getElementById('btn-categories');
 btnCategories.addEventListener('click', function () {
   tableCategories.classList.toggle('hidden-categories');
