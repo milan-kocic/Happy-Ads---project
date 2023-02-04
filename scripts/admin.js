@@ -6,7 +6,6 @@ import {
   getCategories,
   deleteCategory,
 } from './script.js';
-let osoba = 'Milan';
 const search = window.location.search;
 const part = search.split('=');
 let id = part[1];
@@ -256,7 +255,6 @@ function showCategories(categories) {
     btnDelete.innerText = 'Delete';
     btnDelete.addEventListener('click', async function () {
       this.parentNode.parentElement.remove();
-      console.log(this.parentElement.parentElement.parentElement);
       await deleteCategory(category.id);
     });
   }
@@ -264,7 +262,8 @@ function showCategories(categories) {
 
 const btnAddCategory = document.getElementById('btn-add-category');
 btnAddCategory.addEventListener('click', function () {
-  window.open(`/html/category-add.html`, '_self');
+  //window.open(`/html/category-add.html`, '_self');
+  window.open(`category-add?id=${id}`, '_self');
 });
 const btnHome = document.getElementById('btn-home');
 btnHome.addEventListener('click', function () {
@@ -272,4 +271,3 @@ btnHome.addEventListener('click', function () {
 });
 
 window.addEventListener('load', loadData);
-export { id };

@@ -78,6 +78,21 @@
       "id": 5,
       "name": "Furniture",
       "image": "https://t4.ftcdn.net/jpg/03/71/92/67/360_F_371926762_MdmDMtJbXt7DoaDrxFP0dp9Nq1tSFCnR.jpg"
+    },
+    {
+      "name": "Jumpers",
+      "image": "https://plus.unsplash.com/premium_photo-1670930887547-518452a967fb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8anVtcGVyc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+      "id": 6
+    },
+    {
+      "name": "Computers",
+      "image": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y29tcHV0ZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+      "id": 7
+    },
+    {
+      "name": "Mobile phones",
+      "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bW9iaWxlJTIwcGhvbmV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+      "id": 8
     }
   ],
   "ads": [

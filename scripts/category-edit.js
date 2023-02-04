@@ -31,6 +31,7 @@ btnEdit.addEventListener('click', function (e) {
   const name = document.getElementById('category-name').value;
   const categoryImage = document.getElementById('image-adress').value;
   updateCategory(id, name, categoryImage);
+  window.open(`admin?id=${id}`, '_self');
 });
 
 window.addEventListener('load', loadData);

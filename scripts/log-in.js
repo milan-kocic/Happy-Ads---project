@@ -3,7 +3,6 @@ import { checkFields, getUserByUsernameAndPass, showError } from './script.js';
 const usernameInput = document.getElementById('username');
 const passwordInput = document.getElementById('password');
 const loginForm = document.getElementById('form');
-
 const inputArray = [usernameInput, passwordInput];
 
 loginForm.addEventListener('submit', login);
