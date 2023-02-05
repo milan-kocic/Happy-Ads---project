@@ -5,11 +5,154 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="/image/favicon.ico" rel="icon" type="image/x-icon" />
-    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="/styles/admin.css" />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <title>User</title>
   </head>
   <body>
-    <h1>user</h1>
+    <div class="dashboard-container">
+      <nav class="side-navigation">
+        <div>
+          <a href="/index.html" class="navigation-logo"
+            ><img
+              class="logo-admin"
+              src="../image/logo/logo-no-background.png"
+              alt="logo"
+              srcset=""
+          /></a>
+        </div>
+        <div class="menu">
+          <ul class="nav-links">
+            <li>
+              <a href="#">
+                <!-- <i class="uil uil-estate"></i> -->
+                <!-- <i class="bx bxs-user-detail"></i> -->
+                <!-- <i class="bx bxs-group"></i> -->
+                <i class="bx bx-home"></i>
+                <span class="link-name" id="btn-home">Home</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="uil uil-files-landscapes"></i>
+                <span class="link-name" id="btn-add-category">
+                  Add Category</span
+                >
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="uil uil-chart"></i>
+                <span class="link-name">Ads</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="uil uil-thumbs-up"></i>
+                <span class="link-name">Like</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="uil uil-comments"></i>
+                <span class="link-name">Comment</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="uil uil-share"></i>
+                <span class="link-name">Share</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="uil uil-signout"></i>
+                <span class="link-name">Logout</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <section class="container-nav">
+        <div class="admin-info">
+          <p id="name">Name</p>
+          <p id="username">Username</p>
+          <p id="email">Email</p>
+          <p id="adress">Adress</p>
+          <p id="city">City</p>
+          <p id="phone">Phone</p>
+
+          <img
+            class="admin-img"
+            src="/image/avatar-user.webp"
+            alt="admin profile photo"
+          />
+        </div>
+      </section>
+      <section class="container-data">
+        <div class="user-data">
+          <div class="title-dashboard" id="btn-users">
+            <!-- <i class="bx bxs-report"></i> -->
+            <i class="bx bxs-group"></i>
+            <span class="text">Users</span>
+          </div>
+          <table class="table hidden" id="table">
+            <tr>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>User Name</th>
+              <th>Pass</th>
+              <th>Email</th>
+              <th>Adress</th>
+              <th>City</th>
+              <th>Phone</th>
+              <th>Gender</th>
+              <th>Admin</th>
+            </tr>
+          </table>
+        </div>
+        <div class="user-data">
+          <div class="title-dashboard" id="btn-categories">
+            <i class="uil uil-files-landscapes"></i>
+            <span class="text">Categories</span>
+          </div>
+          <table class="table hidden-categories" id="table-categories">
+            <tr>
+              <th>Name</th>
+              <th>Image</th>
+            </tr>
+          </table>
+        </div>
+        <div class="user-data" id="btn-categories">
+          <div class="title-dashboard">
+            <i class="uil uil-chart"></i>
+            <span class="text">Ads</span>
+          </div>
+          <table class="table hidden" id="table">
+            <tr>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>User Name</th>
+              <th>Email</th>
+              <th>Adress</th>
+              <th>City</th>
+              <th>Phone</th>
+              <th>Gender</th>
+              <th>Admin</th>
+            </tr>
+          </table>
+        </div>
+      </section>
+    </div>
+
     <script src="/scripts/user.js" type="module"></script>
   </body>
 </html>
