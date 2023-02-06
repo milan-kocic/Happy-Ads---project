@@ -218,7 +218,9 @@ async function showAds(ads) {
     const tdImage = document.createElement('td');
     const image = document.createElement('img');
     tr.appendChild(tdImage);
+
     tdImage.appendChild(image);
+    image.style.borderRadius = '8px';
     image.src = ad.image;
     image.style.width = '80%';
     image.style.height = '150px';
@@ -257,5 +259,20 @@ async function showAds(ads) {
     });
   }
 }
+const btnAddCategory = document.getElementById('btn-add-ads');
+btnAddCategory.addEventListener('click', function () {
+  //window.open(`/html/category-add.html`, '_self');
+  window.open(`ad-add?id=${id}`, '_self');
+});
+
+const btnHome = document.getElementById('btn-home');
+btnHome.addEventListener('click', function () {
+  window.open(`/index?id=${id}`, '_self');
+});
+
+const btnAd = document.getElementById('btn-page-ads');
+btnAd.addEventListener('click', function () {
+  window.open(`adds?id=${id}`, '_self');
+});
 
 window.addEventListener('load', loadData);

@@ -234,6 +234,7 @@ function showCategories(categories) {
     tr.appendChild(tdImage);
     tdImage.appendChild(image);
     image.src = category.image;
+    image.style.borderRadius = '8px';
     image.classList = 'image-class';
     image.style.display = 'inline-block';
 
@@ -268,7 +269,8 @@ btnAddCategory.addEventListener('click', function () {
 });
 const btnHome = document.getElementById('btn-home');
 btnHome.addEventListener('click', function () {
-  window.open(`../index.html`, '_self');
+  // window.open(`../index.html`, '_self');
+  window.open(`/index?id=${id}`, '_self');
 });
 
 window.addEventListener('load', loadData);

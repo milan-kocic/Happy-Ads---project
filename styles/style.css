@@ -261,7 +261,8 @@ input::-webkit-input-placeholder {
   border-color: var(--success-color);
 }
 
-.form-control.error:not(.gender):not(.admin) input {
+.form-control.error:not(.gender):not(.admin) input,
+.form-control.error textarea {
   border-color: var(--error-color);
 }
 
@@ -298,7 +299,6 @@ input::-webkit-input-placeholder {
 }
 .category-div-select {
   margin-top: 15px;
-
   width: 100%;
   border: 2px solid rgba(105, 221, 157, 0.712);
   border-radius: 4px;

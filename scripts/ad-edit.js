@@ -1,4 +1,10 @@
-import { getCategories, updateAd, getAdsById } from './script.js';
+import {
+  getCategories,
+  updateAd,
+  getAdsById,
+  checkFields,
+  showError,
+} from './script.js';
 
 // primer za splitovanje kad su prosleđena dva ID-ja kroz query string
 // const search = window.location.search;
@@ -17,6 +23,13 @@ const descriptionInput = document.getElementById('ad-description');
 const priceInput = document.getElementById('ad-price');
 const imageInput = document.getElementById('image-adress');
 const categoryInput = document.getElementById('category-name');
+const inputFields = [
+  titleInput,
+  descriptionInput,
+  priceInput,
+  imageInput,
+  categoryInput,
+];
 
 async function loadData() {
   const categories = await getCategories();
@@ -43,15 +56,19 @@ const btnEdit = document.getElementById('btn-edit');
 btnEdit.addEventListener('click', async function (e) {
   e.preventDefault();
   const ad = await getAdsById(id);
-  await updateAd(
-    id,
-    titleInput.value,
-    descriptionInput.value,
-    priceInput.value,
-    imageInput.value,
-    ad.likes,
-    categoryInput.value,
-    id
-  );
+  if (!checkFields(inputFields)) {
+    return;
+  } else {
+    await updateAd(
+      id,
+      titleInput.value,
+      descriptionInput.value,
+      priceInput.value,
+      imageInput.value,
+      ad.likes,
+      categoryInput.value,
+      id
+    );
+  }
 });
 window.addEventListener('load', loadData);
