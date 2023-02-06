@@ -126,7 +126,7 @@ async function updateUser(
   city,
   phoneNumber,
   gender,
-  admin
+  admin = false
 ) {
   const response = await fetch(`http://localhost:3000/users/${id}`, {
     method: 'PUT',
@@ -165,6 +165,36 @@ async function updateCategory(id, name, image) {
   const product = await response.json();
   return product;
 }
+async function updateAd(
+  id,
+  title,
+  description,
+  price,
+  image,
+  likes,
+  categoryId,
+  userId
+) {
+  const response = await fetch(`http://localhost:3000/ads/${id}`, {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+
+    body: JSON.stringify({
+      title,
+      description,
+      price,
+      image,
+      likes,
+      categoryId,
+      userId,
+    }),
+  });
+  const ad = await response.json();
+  return ad;
+}
+
 async function getCategories() {
   const response = await fetch('http://localhost:3000/categories', {
     method: 'GET',
@@ -180,6 +210,20 @@ async function getCategoryById(id) {
   const user = await response.json();
   return user;
 }
+async function getAds() {
+  const response = await fetch('http://localhost:3000/ads', {
+    method: 'GET',
+  });
+  const ads = await response.json();
+  return ads;
+}
+async function getAdsById(id) {
+  const response = await fetch(`http://localhost:3000/ads/${id}`, {
+    method: 'GET',
+  });
+  const ad = await response.json();
+  return ad;
+}
 async function deleteUser(id) {
   const response = await fetch(`http://localhost:3000/users/${id}`, {
     method: 'DELETE',
@@ -193,6 +237,13 @@ async function deleteCategory(id) {
   });
   const product = await response.json();
   return product;
+}
+async function deleteAd(id) {
+  const response = await fetch(`http://localhost:3000/ads/${id}`, {
+    method: 'DELETE',
+  });
+  const ad = await response.json();
+  return ad;
 }
 
 export {
@@ -212,4 +263,8 @@ export {
   deleteCategory,
   updateCategory,
   getCategoryById,
+  getAds,
+  getAdsById,
+  deleteAd,
+  updateAd,
 };

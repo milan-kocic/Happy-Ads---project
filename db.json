@@ -21,20 +21,20 @@
       "email": "alex88@gmail.com",
       "adress": "Kneza Milosa 15",
       "city": "Beograd",
-      "phoneNumber": "0646658737\n",
+      "phoneNumber": "0646658737",
       "gender": "F",
       "admin": true,
       "id": 2
     },
     {
-      "firstName": "Milos",
-      "lastName": "Zivkovic",
+      "firstName": "Miloš",
+      "lastName": "Živković",
       "username": "misa80",
       "password": "000000",
       "email": "misa80@gmail.com",
-      "adress": "Zaplanjska 155",
+      "adress": "Kralja Milana 15",
       "city": "Novi Sad",
-      "phoneNumber": "0631523698",
+      "phoneNumber": "0646658737",
       "gender": "M",
       "admin": false,
       "id": 3
@@ -55,9 +55,9 @@
   ],
   "categories": [
     {
+      "id": 1,
       "name": "Cars",
-      "image": "https://imgd-ct.aeplcdn.com/370x208/n/cw/ec/106257/venue-exterior-right-front-three-quarter-2.jpeg?isig=0&q=75",
-      "id": 1
+      "image": "https://images.unsplash.com/photo-1583121274602-3e2820c69888?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y2Fyc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
     },
     {
       "id": 2,
@@ -80,49 +80,45 @@
       "image": "https://t4.ftcdn.net/jpg/03/71/92/67/360_F_371926762_MdmDMtJbXt7DoaDrxFP0dp9Nq1tSFCnR.jpg"
     },
     {
-      "name": "Jumpers",
-      "image": "https://plus.unsplash.com/premium_photo-1670930887547-518452a967fb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8anVtcGVyc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+      "name": "Men's clothing",
+      "image": "https://images.unsplash.com/photo-1536593998369-f0d25ed0fb1d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8Mnw4ODExMzY2fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
       "id": 6
     },
     {
-      "name": "Computers",
-      "image": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y29tcHV0ZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+      "name": "Electronics",
+      "image": "https://images.unsplash.com/photo-1547394765-185e1e68f34e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y29tcHV0ZXJzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
       "id": 7
-    },
-    {
-      "name": "Mobile phones",
-      "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bW9iaWxlJTIwcGhvbmV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
-      "id": 8
     }
   ],
   "ads": [
     {
-      "id": 1,
-      "title": "Radio",
-      "description": "",
-      "price": 3500,
-      "image": "",
+      "title": "SanDisk SSD",
+      "description": "Easy upgrade for faster boot up, shutdown, application load and response ",
+      "price": "350",
+      "image": "https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_.jpg",
       "likes": 5,
-      "categoryId": 2,
-      "userId": 2
+      "categoryId": "7",
+      "userId": "1",
+      "id": 1
     },
     {
       "id": 2,
       "title": "Sneakers",
-      "description": "",
+      "description": "Our shoes are made for walking. For running. For chasing. For dancing. ",
       "price": 2500,
-      "image": "",
+      "image": "https://images.unsplash.com/photo-1549298916-f52d724204b4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fHNuZWFrZXJzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
       "likes": 5,
-      "categoryId": 2,
+      "categoryId": 3,
       "userId": 2
     },
     {
-      "title": "",
-      "description": "",
+      "id": 3,
+      "title": "Fjallraven- laptop bag",
+      "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop.",
       "price": 2500,
-      "image": "",
+      "image": "https://www.n-sport.net/UserFiles/products/big/05/31/muska-torba-tommy-hilfiger-essential-pu-computer-bag-AM0AM09507-BDS.jpg",
       "likes": 5,
-      "categoryId": 2,
+      "categoryId": 6,
       "userId": 2
     }
   ]

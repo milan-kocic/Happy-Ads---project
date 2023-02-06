@@ -198,6 +198,7 @@ function showUsers(users) {
     });
   }
 }
+//funkcija za kreiranje tabele
 // function createTableData(data) {
 //   for (let dataElement of data) {
 //     const tr = document.createElement('tr');

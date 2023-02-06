@@ -159,7 +159,7 @@ body {
   gap: 20px;
 }
 /***********************************************************************/
-/********REGISTRATION AND LOGIN PAGE*********************************************/
+/********REGISTRATION AND LOGIN PAGE************************************/
 /**********************************************************************/
 .body-registration,
 .body-login,
@@ -168,7 +168,8 @@ body {
 }
 .registration-container,
 .login-container,
-.edit-container {
+.edit-container,
+.ad-edit-container {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -183,6 +184,9 @@ body {
 .login-container,
 .edit-container {
   top: 40%;
+}
+.ad-edit-container {
+  top: 50%;
 }
 .form {
   padding: 15px 30px;
@@ -207,7 +211,9 @@ body {
   padding-bottom: 15px;
   position: relative;
 }
-
+label {
+  color: hsl(147, 43%, 31%);
+}
 /* .form-control label {
   color: #777;
 } */
@@ -216,7 +222,8 @@ input::-webkit-input-placeholder {
   /* color: rgba(81, 212, 140, 0.589); */
   color: hsl(147, 19%, 25%);
 }
-.form-control:not(.gender):not(.admin) input {
+.form-control:not(.gender):not(.admin) input,
+.form-control textarea {
   border: 2px solid rgba(105, 221, 157, 0.712);
   border-radius: 4px;
   width: 100%;
@@ -226,7 +233,9 @@ input::-webkit-input-placeholder {
   color: hsl(147, 19%, 25%);
   font-size: 16px;
   display: block;
+  font-family: inherit;
 }
+
 .form-control input:focus {
   outline: 0;
   border-color: #777;
@@ -246,9 +255,6 @@ input::-webkit-input-placeholder {
 .btn-login {
   width: 100%;
   display: block;
-}
-.btn-login {
-  margin-top: 15px;
 }
 
 .form-control.success input {
@@ -274,7 +280,7 @@ input::-webkit-input-placeholder {
 /*********************************************************/
 /******************CATEGORIES**********************/
 /********************************************************/
-/* 
+
 .category-select {
   appearance: none;
   background-color: transparent;
@@ -291,6 +297,8 @@ input::-webkit-input-placeholder {
   grid-area: select;
 }
 .category-div-select {
+  margin-top: 15px;
+
   width: 100%;
   border: 2px solid rgba(105, 221, 157, 0.712);
   border-radius: 4px;
@@ -313,4 +321,4 @@ input::-webkit-input-placeholder {
   display: grid;
   grid-area: select;
   justify-self: self-end;
-} */
+}

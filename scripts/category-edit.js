@@ -1,6 +1,5 @@
 import { updateCategory, getCategoryById } from './script.js';
-// updateCategory(id, name, image)
-// getCategories()
+
 const search = window.location.search;
 const part = search.split('=');
 const id = part[1];

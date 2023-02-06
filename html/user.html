@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="/image/favicon.ico" rel="icon" type="image/x-icon" />
-    <link rel="stylesheet" href="/styles/admin.css" />
-    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="../styles/admin.css" />
+    <link rel="stylesheet" href="../styles/style.css" />
     <link
       rel="stylesheet"
       href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
@@ -33,9 +33,6 @@
           <ul class="nav-links">
             <li>
               <a href="#">
-                <!-- <i class="uil uil-estate"></i> -->
-                <!-- <i class="bx bxs-user-detail"></i> -->
-                <!-- <i class="bx bxs-group"></i> -->
                 <i class="bx bx-home"></i>
                 <span class="link-name" id="btn-home">Home</span>
               </a>
@@ -43,9 +40,7 @@
             <li>
               <a href="#">
                 <i class="uil uil-files-landscapes"></i>
-                <span class="link-name" id="btn-add-category">
-                  Add Category</span
-                >
+                <span class="link-name" id="btn-add-category"> New add</span>
               </a>
             </li>
             <li>
@@ -102,7 +97,7 @@
           <div class="title-dashboard" id="btn-users">
             <!-- <i class="bx bxs-report"></i> -->
             <i class="bx bxs-group"></i>
-            <span class="text">Users</span>
+            <span class="text">User profile</span>
           </div>
           <table class="table hidden" id="table">
             <tr>
@@ -119,34 +114,20 @@
             </tr>
           </table>
         </div>
+
         <div class="user-data">
-          <div class="title-dashboard" id="btn-categories">
-            <i class="uil uil-files-landscapes"></i>
-            <span class="text">Categories</span>
-          </div>
-          <table class="table hidden-categories" id="table-categories">
-            <tr>
-              <th>Name</th>
-              <th>Image</th>
-            </tr>
-          </table>
-        </div>
-        <div class="user-data" id="btn-categories">
-          <div class="title-dashboard">
+          <div class="title-dashboard" id="btn-ads">
             <i class="uil uil-chart"></i>
-            <span class="text">Ads</span>
+            <span class="text">User ads</span>
           </div>
-          <table class="table hidden" id="table">
+          <table class="table hidden-categories" id="table-ads">
             <tr>
-              <th>First Name</th>
-              <th>Last Name</th>
-              <th>User Name</th>
-              <th>Email</th>
-              <th>Adress</th>
-              <th>City</th>
-              <th>Phone</th>
-              <th>Gender</th>
-              <th>Admin</th>
+              <th>Title</th>
+              <th>Description</th>
+              <th>Price</th>
+              <th>Image</th>
+              <th>Likes</th>
+              <th>Category</th>
             </tr>
           </table>
         </div>

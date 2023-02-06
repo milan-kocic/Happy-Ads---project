@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="/image/favicon.ico" rel="icon" type="image/x-icon" />
+    <link rel="stylesheet" href="/styles/style.css" />
+
+    <title>Ad-Edit</title>
+  </head>
+  <body class="body-edit">
+    <div class="ad-edit-container">
+      <form id="form" class="form form-edit">
+        <h2>Edit selected ad</h2>
+        <div class="form-control">
+          <label for="">Ad title</label>
+          <input type="text" name="" id="ad-title" />
+        </div>
+        <div class="form-control">
+          <label for="">Ad description</label>
+          <textarea name="" id="ad-description" cols="45" rows="3"></textarea>
+        </div>
+        <div class="form-control">
+          <label for="">Ad price</label>
+          <input type="text" name="" id="ad-price" />
+        </div>
+        <div class="form-control">
+          <label for="">Image adress</label>
+          <input type="text" name="" id="image-adress" />
+        </div>
+        <div class="form-control">
+          <div class="category-div-select">
+            <select name="" id="category-name" class="category-select"></select>
+          </div>
+        </div>
+        <button id="btn-edit" class="btn btn-login">Edit</button>
+      </form>
+    </div>
+    <script src="/scripts/ad-edit.js" type="module"></script>
+  </body>
+</html>
