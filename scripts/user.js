@@ -3,22 +3,33 @@ import {
   updateUser,
   deleteUser,
   getAds,
-  getAdsById,
   getCategoryById,
   deleteAd,
+  getAdsByUserId,
+  getCategories,
 } from './script.js';
+
+// Implementirati filtriranje oglasa po kategoriji. Kreirati selekt sa opcijama koje predstavljaju kategorije iz db.json i dugme Search.
+// Klikom na dugme prikazati samo one oglase prijavljenog korisnika koji pripadaju izbaranoj kategoriji.
+
 const search = window.location.search;
 const part = search.split('=');
 let id = part[1];
 
+let adsArray;
+let ads;
+let categories;
 async function loadData() {
   const user = await getUserById(id);
   showUserInfo(user);
   showUser(user);
-  const ads = await getAds();
+  ads = await getAdsByUserId(id);
   showAds(ads);
+  adsArray = await getAds();
+  categories = await getCategories();
+  showAdSelect(categories);
 }
-
+console.log(adsArray, ads, categories);
 const table = document.getElementById('table');
 const btnUsers = document.getElementById('btn-users');
 btnUsers.addEventListener('click', function () {
@@ -196,6 +207,10 @@ function showUser(user) {
   });
 }
 async function showAds(ads) {
+  const categories = await getCategories();
+  while (tableAds.rows.length > 1) {
+    tableAds.deleteRow(1);
+  }
   for (let ad of ads) {
     const tr = document.createElement('tr');
     tableAds.appendChild(tr);
@@ -227,12 +242,12 @@ async function showAds(ads) {
 
     const tdLikes = document.createElement('td');
     tr.appendChild(tdLikes);
-    tdLikes.innerText = ad.likes;
+    tdLikes.innerHTML = ` ${ad.likes} <i class="uil uil-thumbs-up"></i>`;
 
-    const category = await getCategoryById(ad.categoryId);
     const tdCategory = document.createElement('td');
     tr.appendChild(tdCategory);
-    tdCategory.innerText = category.name;
+    const cat = categories.find((category) => category.id == ad.categoryId);
+    tdCategory.innerHTML = cat.name;
 
     const divBtn = document.createElement('div');
 
@@ -259,6 +274,24 @@ async function showAds(ads) {
     });
   }
 }
+
+function showAdSelect(categories) {
+  const select = document.getElementById('category-search');
+  for (let category of categories) {
+    const option = document.createElement('option');
+    select.appendChild(option);
+    option.innerText = category.name;
+    option.value = category.id;
+  }
+}
+const btnSearch = document.getElementById('btn-search');
+btnSearch.addEventListener('click', async function () {
+  const categoryId = document.getElementById('category-search').value;
+  const filteredAds = ads.filter((n) => n.categoryId == categoryId);
+  console.log(adsArray, ads, categories);
+  showAds(filteredAds);
+});
+
 const btnAddCategory = document.getElementById('btn-add-ads');
 btnAddCategory.addEventListener('click', function () {
   //window.open(`/html/category-add.html`, '_self');

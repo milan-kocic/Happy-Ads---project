@@ -1,10 +1,4 @@
-import {
-  getCategories,
-  updateAd,
-  getAdsById,
-  checkFields,
-  showError,
-} from './script.js';
+import { getCategories, addNewAd, getAdsById, checkFields } from './script.js';
 
 // primer za splitovanje kad su prosleđena dva ID-ja kroz query string
 // const search = window.location.search;
@@ -23,13 +17,7 @@ const descriptionInput = document.getElementById('ad-description');
 const priceInput = document.getElementById('ad-price');
 const imageInput = document.getElementById('image-adress');
 const categoryInput = document.getElementById('category-name');
-const inputFields = [
-  titleInput,
-  descriptionInput,
-  priceInput,
-  imageInput,
-  categoryInput,
-];
+const inputFields = [titleInput, descriptionInput, priceInput, imageInput];
 
 async function loadData() {
   const categories = await getCategories();
@@ -42,6 +30,7 @@ function showAdSelect(categories) {
   for (let category of categories) {
     const option = document.createElement('option');
     select.appendChild(option);
+    option.classList = 'option-center';
     option.innerText = category.name;
     option.value = category.id;
   }
@@ -53,16 +42,16 @@ btnAdd.addEventListener('click', async function (e) {
   if (!checkFields(inputFields)) {
     return;
   } else {
-    await updateAd(
-      id,
+    await addNewAd(
       titleInput.value,
       descriptionInput.value,
       priceInput.value,
       imageInput.value,
-      ad.likes,
+      0,
       categoryInput.value,
       id
     );
+    window.open(`user?id=${id}`, '_self');
   }
 });
 window.addEventListener('load', loadData);

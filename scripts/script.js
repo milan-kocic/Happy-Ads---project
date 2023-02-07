@@ -91,6 +91,32 @@ async function addNewCategory(name, image) {
   return user;
 }
 
+async function addNewAd(
+  title,
+  description,
+  price,
+  image,
+  likes,
+  categoryId,
+  userId
+) {
+  const response = await fetch(`http://localhost:3000/ads`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      title,
+      description,
+      price,
+      image,
+      likes,
+      categoryId,
+      userId,
+    }),
+  });
+  const ad = await response.json();
+  return ad;
+}
+
 async function getUserByUsernameAndPass(username, password) {
   const response = await fetch(
     `http://localhost:3000/users?username=${username}&password=${password}`,
@@ -224,6 +250,13 @@ async function getAdsById(id) {
   const ad = await response.json();
   return ad;
 }
+async function getAdsByUserId(id) {
+  const response = await fetch(`http://localhost:3000/ads?userId=${id}`, {
+    method: 'GET',
+  });
+  const ad = await response.json();
+  return ad;
+}
 async function deleteUser(id) {
   const response = await fetch(`http://localhost:3000/users/${id}`, {
     method: 'DELETE',
@@ -265,6 +298,8 @@ export {
   getCategoryById,
   getAds,
   getAdsById,
+  getAdsByUserId,
   deleteAd,
   updateAd,
+  addNewAd,
 };

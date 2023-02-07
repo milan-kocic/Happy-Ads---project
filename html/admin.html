@@ -31,21 +31,19 @@
         </div>
         <div class="menu">
           <ul class="nav-links">
-            <li>
+            <li id="btn-home">
               <a href="#">
                 <!-- <i class="uil uil-estate"></i> -->
                 <!-- <i class="bx bxs-user-detail"></i> -->
                 <!-- <i class="bx bxs-group"></i> -->
                 <i class="bx bx-home"></i>
-                <span class="link-name" id="btn-home">Home</span>
+                <span class="link-name">Home</span>
               </a>
             </li>
-            <li>
+            <li id="btn-add-category">
               <a href="#">
                 <i class="uil uil-files-landscapes"></i>
-                <span class="link-name" id="btn-add-category">
-                  Add Category</span
-                >
+                <span class="link-name"> Add Category</span>
               </a>
             </li>
             <li>
@@ -126,8 +124,14 @@
           </div>
           <table class="table hidden-categories" id="table-categories">
             <tr>
-              <th>Name</th>
-              <th>Image</th>
+              <!-- <th>Name</th> -->
+              <th class="category-search-select">
+                <select name="" class="category-search">
+                  <option value="" selected>Category</option>
+                </select>
+                <button id="btn-search" class="btn btn-search">Search</button>
+              </th>
+              <!-- <th>Image</th> -->
             </tr>
           </table>
         </div>

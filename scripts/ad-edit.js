@@ -1,10 +1,4 @@
-import {
-  getCategories,
-  updateAd,
-  getAdsById,
-  checkFields,
-  showError,
-} from './script.js';
+import { getCategories, updateAd, getAdsById, checkFields } from './script.js';
 
 // primer za splitovanje kad su prosleđena dva ID-ja kroz query string
 // const search = window.location.search;
@@ -23,18 +17,14 @@ const descriptionInput = document.getElementById('ad-description');
 const priceInput = document.getElementById('ad-price');
 const imageInput = document.getElementById('image-adress');
 const categoryInput = document.getElementById('category-name');
-const inputFields = [
-  titleInput,
-  descriptionInput,
-  priceInput,
-  imageInput,
-  categoryInput,
-];
+const inputFields = [titleInput, descriptionInput, priceInput, imageInput];
+
+let ad;
 
 async function loadData() {
   const categories = await getCategories();
   showAdSelect(categories);
-  const ad = await getAdsById(id);
+  ad = await getAdsById(id);
 
   titleInput.value = ad.title;
   descriptionInput.value = ad.description;
@@ -55,7 +45,7 @@ function showAdSelect(categories) {
 const btnEdit = document.getElementById('btn-edit');
 btnEdit.addEventListener('click', async function (e) {
   e.preventDefault();
-  const ad = await getAdsById(id);
+
   if (!checkFields(inputFields)) {
     return;
   } else {
@@ -69,6 +59,8 @@ btnEdit.addEventListener('click', async function (e) {
       categoryInput.value,
       id
     );
+
+    window.open(`user?id=${id}`, '_self');
   }
 });
 window.addEventListener('load', loadData);

@@ -31,22 +31,22 @@
         </div>
         <div class="menu">
           <ul class="nav-links">
-            <li>
+            <li id="btn-home">
               <a href="#">
                 <i class="bx bx-home"></i>
-                <span class="link-name" id="btn-home">Home</span>
+                <span class="link-name">Home</span>
               </a>
             </li>
-            <li>
+            <li id="btn-add-ads">
               <a href="#">
                 <i class="uil uil-files-landscapes"></i>
-                <span class="link-name" id="btn-add-ads"> New add</span>
+                <span class="link-name"> New add</span>
               </a>
             </li>
-            <li>
+            <li id="btn-page-ads">
               <a href="#">
                 <i class="uil uil-chart"></i>
-                <span class="link-name" id="btn-page-ads">Ads</span>
+                <span class="link-name">Ads</span>
               </a>
             </li>
             <li>
@@ -127,7 +127,12 @@
               <th>Price</th>
               <th>Image</th>
               <th>Likes</th>
-              <th>Category</th>
+              <th class="category-search-select">
+                <select name="" class="category-search" id="category-search">
+                  <option value="" selected>Category</option>
+                </select>
+                <button id="btn-search" class="btn btn-search">Search</button>
+              </th>
             </tr>
           </table>
         </div>

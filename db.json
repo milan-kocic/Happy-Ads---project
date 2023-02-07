@@ -94,7 +94,7 @@
     {
       "title": "SanDisk SSD",
       "description": "Easy upgrade for faster boot up, shutdown, application load and response ",
-      "price": "3500",
+      "price": "350",
       "image": "https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_.jpg",
       "likes": 5,
       "categoryId": "7",
@@ -112,14 +112,34 @@
       "userId": 2
     },
     {
-      "id": 3,
       "title": "Fjallraven- laptop bag",
       "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop.",
-      "price": 2500,
+      "price": "2500",
       "image": "https://www.n-sport.net/UserFiles/products/big/05/31/muska-torba-tommy-hilfiger-essential-pu-computer-bag-AM0AM09507-BDS.jpg",
-      "likes": 5,
-      "categoryId": 6,
-      "userId": 2
+      "likes": 8,
+      "categoryId": "6",
+      "userId": "3",
+      "id": 3
+    },
+    {
+      "title": "Volkswagen Golf 4 1.9tdi",
+      "description": "Auto je u izuzetnom stanju, ocuvan i spolja i unutra. Mehanicki bez greske, dobre zimske gume.",
+      "price": "2690",
+      "image": "https://gcdn.polovniautomobili.com/user-images/thumbs/2118/21186193/5240aa8be6cb-1920x1080.jpg",
+      "likes": "1",
+      "categoryId": "1",
+      "userId": "3",
+      "id": 4
+    },
+    {
+      "title": "Volkswagen Golf 4 1.9tdi",
+      "description": "Auto je u izuzetnom stanju, ocuvan i spolja i unutra. Mehanicki bez greske, dobre zimske gume.",
+      "price": "2690",
+      "image": "https://gcdn.polovniautomobili.com/user-images/thumbs/2118/21186193/5240aa8be6cb-1920x1080.jpg",
+      "likes": "1",
+      "categoryId": "1",
+      "userId": "3",
+      "id": 5
     }
   ]
 }

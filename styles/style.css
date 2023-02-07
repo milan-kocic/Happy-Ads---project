@@ -97,7 +97,9 @@ body {
   line-height: 1.2;
   margin-bottom: 40px;
 }
-/*******BUTTONS*********/
+/******************************************************/
+/*****************BUTTONS*******************************/
+/******************************************************/
 
 .btn-first,
 .btn-registration,
@@ -121,6 +123,22 @@ body {
   /* flex: 0 0 30%;
   text-align: center; */
 }
+/******************************************************/
+.btn-search {
+  box-shadow: 0px 1px 0px 0px #f0f7fa;
+  background: linear-gradient(to bottom, #2fc59d 5%, #27daaa 100%);
+  background-color: #2fc59d;
+  border-radius: 6px;
+  border: 1px solid #2fc59d;
+  display: inline-block;
+  cursor: pointer;
+  color: #fafafa;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 2px 4px;
+  text-decoration: none;
+}
 .btn-second {
   box-shadow: 0px 1px 0px 0px #f0f7fa;
   /* background: linear-gradient(to bottom, #2fc59d 5%, #27daaa 100%); */
@@ -139,7 +157,8 @@ body {
 .btn-first:hover,
 .btn-registration:hover,
 .btn-login:hover,
-.btn-edit:hover {
+.btn-edit:hover,
+.btn-search:hover {
   background: linear-gradient(to bottom, #56d3b2 5%, #31fdc7 100%);
   background-color: #34d4aa;
 }
@@ -217,7 +236,8 @@ label {
 /* .form-control label {
   color: #777;
 } */
-input::-webkit-input-placeholder {
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
   text-align: center;
   /* color: rgba(81, 212, 140, 0.589); */
   color: hsl(147, 19%, 25%);
@@ -236,9 +256,10 @@ input::-webkit-input-placeholder {
   font-family: inherit;
 }
 
-.form-control input:focus {
+.form-control:not(.gender):not(.admin) input:focus,
+.form-control textarea:focus {
   outline: 0;
-  border-color: #777;
+  border: 2px solid #777;
 }
 .form-control .login input {
   padding: 20px;
@@ -257,7 +278,8 @@ input::-webkit-input-placeholder {
   display: block;
 }
 
-.form-control.success input {
+.form-control.success input,
+.form-control.success textarea {
   border-color: var(--success-color);
 }
 
@@ -278,8 +300,14 @@ input::-webkit-input-placeholder {
 .form-control.error small {
   visibility: visible;
 }
+.label-add {
+  visibility: hidden;
+}
+.label-visible {
+  visibility: visible;
+}
 /*********************************************************/
-/******************CATEGORIES**********************/
+/******************SELECT - CATEGORIES**********************/
 /********************************************************/
 
 .category-select {
@@ -296,6 +324,9 @@ input::-webkit-input-placeholder {
   outline: none;
   color: hsl(147, 19%, 25%);
   grid-area: select;
+}
+.option-center {
+  text-align: center;
 }
 .category-div-select {
   margin-top: 15px;
@@ -321,4 +352,10 @@ input::-webkit-input-placeholder {
   display: grid;
   grid-area: select;
   justify-self: self-end;
+}
+.category-search {
+  color: hsl(147, 19%, 25%);
+  border: 2px solid rgba(105, 221, 157, 0.712);
+  border-radius: 4px;
+  padding: 1px;
 }
