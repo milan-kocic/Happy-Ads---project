@@ -130,16 +130,6 @@
       "categoryId": "1",
       "userId": "3",
       "id": 4
-    },
-    {
-      "title": "Volkswagen Golf 4 1.9tdi",
-      "description": "Auto je u izuzetnom stanju, ocuvan i spolja i unutra. Mehanicki bez greske, dobre zimske gume.",
-      "price": "2690",
-      "image": "https://gcdn.polovniautomobili.com/user-images/thumbs/2118/21186193/5240aa8be6cb-1920x1080.jpg",
-      "likes": "1",
-      "categoryId": "1",
-      "userId": "3",
-      "id": 5
     }
   ]
 }

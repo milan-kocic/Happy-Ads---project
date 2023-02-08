@@ -7,7 +7,11 @@
     <link href="image/favicon.ico" rel="icon" type="image/x-icon" />
     <link rel="stylesheet" href="styles/style.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
     <title>Happy Ads</title>
@@ -19,12 +23,24 @@
         <a href="index.html" class="navigation-logo"
           ><img
             class="logo"
-            src="image/logo/logo-no-background.png"
+            src="/image/logo/logo-no-background.png"
             alt="logo"
             srcset=""
         /></a>
         <nav>
           <ul class="navigation-links">
+            <li class="navigation-link">
+              <a href="html/registration.html">Home</a>
+            </li>
+            <li class="navigation-link">
+              <a href="html/registration.html">Ads</a>
+            </li>
+            <li class="navigation-link">
+              <a href="html/registration.html">About Us</a>
+            </li>
+            <li class="navigation-link">
+              <a href="html/registration.html">Contact</a>
+            </li>
             <li class="navigation-link">
               <a href="html/registration.html">Registration</a>
             </li>
@@ -33,6 +49,14 @@
             </li>
           </ul>
         </nav>
+
+        <a href="/html/log-in.html" class="btn-post-ads"
+          ><i
+            class="bx bx-plus bx-flip-horizontal bx-tada"
+            style="color: #ffffff; font-size: 22px; font-weight: bold"
+          ></i>
+          Post Your Ad</a
+        >
       </div>
     </header>
     <section class="container">
@@ -58,6 +82,9 @@
         </div>
       </div>
     </section>
-    <!-- <script src="scripts/script.js"></script> -->
+    <section class="show-category">
+      <div class="categories" id="categories"></div>
+    </section>
+    <script src="scripts/index.js" type="module"></script>
   </body>
 </html>
