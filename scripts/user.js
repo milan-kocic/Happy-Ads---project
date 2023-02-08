@@ -9,9 +9,6 @@ import {
   getCategories,
 } from './script.js';
 
-// Implementirati filtriranje oglasa po kategoriji. Kreirati selekt sa opcijama koje predstavljaju kategorije iz db.json i dugme Search.
-// Klikom na dugme prikazati samo one oglase prijavljenog korisnika koji pripadaju izbaranoj kategoriji.
-
 const search = window.location.search;
 const part = search.split('=');
 let id = part[1];
@@ -284,12 +281,17 @@ function showAdSelect(categories) {
     option.value = category.id;
   }
 }
-const btnSearch = document.getElementById('btn-search');
-btnSearch.addEventListener('click', async function () {
-  const categoryId = document.getElementById('category-search').value;
-  const filteredAds = ads.filter((n) => n.categoryId == categoryId);
-  console.log(adsArray, ads, categories);
-  showAds(filteredAds);
+//const btnSearch = document.getElementById('btn-search');
+const select = document.getElementById('category-search');
+select.addEventListener('change', async function (e) {
+  if (e.target.value === 'showAll') {
+    showAds(ads);
+  } else {
+    const categoryId = document.getElementById('category-search').value;
+    const filteredAds = ads.filter((n) => n.categoryId == categoryId);
+    console.log(adsArray, ads, categories);
+    showAds(filteredAds);
+  }
 });
 
 const btnAddCategory = document.getElementById('btn-add-ads');

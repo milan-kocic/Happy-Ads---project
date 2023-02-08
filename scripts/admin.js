@@ -9,14 +9,15 @@ import {
 const search = window.location.search;
 const part = search.split('=');
 let id = part[1];
-
+let categories;
 async function loadData() {
   const user = await getUserById(id);
   showAdminInfo(user);
   const users = await getUsers();
   showUsers(users);
-  const categories = await getCategories(id);
+  categories = await getCategories();
   showCategories(categories);
+  showAdSelect(categories);
 }
 const table = document.getElementById('table');
 const btnUsers = document.getElementById('btn-users');
@@ -219,7 +220,10 @@ const btnCategories = document.getElementById('btn-categories');
 btnCategories.addEventListener('click', function () {
   tableCategories.classList.toggle('hidden-categories');
 });
-function showCategories(categories) {
+async function showCategories(categories) {
+  while (tableCategories.rows.length > 1) {
+    tableCategories.deleteRow(1);
+  }
   for (let category of categories) {
     const tr = document.createElement('tr');
     tableCategories.appendChild(tr);
@@ -227,6 +231,7 @@ function showCategories(categories) {
     const tdName = document.createElement('td');
     tr.appendChild(tdName);
     tdName.innerText = category.name;
+    tdName.style.fontWeight = 'bold';
 
     const tdImage = document.createElement('td');
 
@@ -262,6 +267,27 @@ function showCategories(categories) {
   }
 }
 
+function showAdSelect(categories) {
+  const select = document.getElementById('category-search');
+  for (let category of categories) {
+    const option = document.createElement('option');
+    select.appendChild(option);
+    option.innerText = category.name;
+    option.value = category.id;
+  }
+}
+
+const select = document.getElementById('category-search');
+select.addEventListener('change', function (e) {
+  if (e.target.value === 'showAll') {
+    showCategories(categories);
+  } else {
+    const categoryId = document.getElementById('category-search').value;
+    const filteredCategories = categories.filter((n) => n.id == categoryId);
+    showCategories(filteredCategories);
+  }
+});
+
 const btnAddCategory = document.getElementById('btn-add-category');
 btnAddCategory.addEventListener('click', function () {
   //window.open(`/html/category-add.html`, '_self');
@@ -271,6 +297,10 @@ const btnHome = document.getElementById('btn-home');
 btnHome.addEventListener('click', function () {
   // window.open(`../index.html`, '_self');
   window.open(`/index?id=${id}`, '_self');
+});
+const btnAd = document.getElementById('btn-page-ads');
+btnAd.addEventListener('click', function () {
+  window.open(`adds?id=${id}`, '_self');
 });
 
 window.addEventListener('load', loadData);
