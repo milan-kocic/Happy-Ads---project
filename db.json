@@ -51,6 +51,32 @@
       "gender": "M",
       "admin": false,
       "id": 4
+    },
+    {
+      "firstName": "Branislav",
+      "lastName": "Mirković",
+      "email": "bane87@mail.com",
+      "username": "bane87",
+      "password": "555555",
+      "adress": "Majakovskog 10",
+      "city": "Požarevac",
+      "phoneNumber": "0642583693",
+      "gender": "M",
+      "admin": false,
+      "id": 5
+    },
+    {
+      "firstName": "Milena",
+      "lastName": "Pešić",
+      "email": "milena77@gmail.com",
+      "username": "milena77",
+      "password": "777777",
+      "adress": "Petra Kočića 3",
+      "city": "Zaječar",
+      "phoneNumber": "0648521479",
+      "gender": "F",
+      "admin": false,
+      "id": 6
     }
   ],
   "categories": [
@@ -88,6 +114,21 @@
       "name": "Electronics",
       "image": "https://images.unsplash.com/photo-1547394765-185e1e68f34e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y29tcHV0ZXJzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
       "id": 7
+    },
+    {
+      "name": "Health & Personal Care",
+      "image": "https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2022/February/DashboardCards/GW_CONS_AUS_HPC_HPCEssentials_CatCard_Desktop1x._SY304_CB627424361_.jpg",
+      "id": 8
+    },
+    {
+      "name": "Toys",
+      "image": "https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2021/September/DashboardCards/Fuji_Dash_Toys_1X._SY304_CB639759658_.jpg",
+      "id": 9
+    },
+    {
+      "name": "Books",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdR98snlJmlTEFVRTvoP_YDFwjZV6LnwQ9hA&usqp=CAU",
+      "id": 10
     }
   ],
   "ads": [
@@ -95,7 +136,7 @@
       "title": "SanDisk SSD",
       "description": "Easy upgrade for faster boot up, shutdown, application load and response ",
       "price": "350",
-      "image": "https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_.jpg",
+      "image": "https://img.gigatron.rs/img/products/large/image59352a06ecba4.jpg",
       "likes": 5,
       "categoryId": "7",
       "userId": "1",
@@ -112,7 +153,7 @@
       "userId": 2
     },
     {
-      "title": "Fjallraven- laptop bag",
+      "title": "Laptop bag",
       "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop.",
       "price": "2500",
       "image": "https://www.n-sport.net/UserFiles/products/big/05/31/muska-torba-tommy-hilfiger-essential-pu-computer-bag-AM0AM09507-BDS.jpg",
@@ -122,7 +163,7 @@
       "id": 3
     },
     {
-      "title": "Volkswagen Golf 4 1.9tdi",
+      "title": "VW Golf 4 1.9tdi",
       "description": "Auto je u izuzetnom stanju, ocuvan i spolja i unutra. Mehanicki bez greske, dobre zimske gume.",
       "price": "2690",
       "image": "https://gcdn.polovniautomobili.com/user-images/thumbs/2118/21186193/5240aa8be6cb-1920x1080.jpg",
@@ -130,6 +171,56 @@
       "categoryId": "1",
       "userId": "3",
       "id": 4
+    },
+    {
+      "title": "ŽIVOT, LITERATURA...",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi ",
+      "price": "6",
+      "image": "https://knjigeobradovic.com/wp-content/uploads/2023/02/ZIVOT-LITERATURA-DANILO-KIS.jpg",
+      "likes": 0,
+      "categoryId": "10",
+      "userId": "3",
+      "id": 5
+    },
+    {
+      "title": "COSRX Snail Mucin",
+      "description": "The Real Snail Essence: Formulated with 96.3% Snail Secretion Filtrate, this essence repairs and rejuvenates the skin from dryness and aging. It improves skin vitality by reducing dullness and soothing dehydrated skin.",
+      "price": "39",
+      "image": "https://m.media-amazon.com/images/I/518q7cM2t4L._SX425_.jpg",
+      "likes": 0,
+      "categoryId": "8",
+      "userId": "6",
+      "id": 6
+    },
+    {
+      "title": "Schick Hydro Silk",
+      "description": "Quick, Easy Touch-Ups – Schick Hydro Silk Touch-Up is a versatile beauty tool that shapes eyebrows, removes fine hairs and even smooths skin by gently exfoliating.",
+      "price": "5",
+      "image": "https://m.media-amazon.com/images/I/71DWrr20pIL._SL1500_.jpg",
+      "likes": 0,
+      "categoryId": "8",
+      "userId": "6",
+      "id": 7
+    },
+    {
+      "title": "Bentley GT W12",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi ",
+      "price": "209900",
+      "image": "https://gcdn.polovniautomobili.com/user-images/thumbs/2087/20873741/29619952d90d-1920x1080-dw.jpg",
+      "likes": 0,
+      "categoryId": "1",
+      "userId": "4",
+      "id": 8
+    },
+    {
+      "title": "Lexus IS 220",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi ",
+      "price": "8590",
+      "image": "https://gcdn.polovniautomobili.com/user-images/thumbs/2106/21068550/51ddf6976f74-1920x1080.jpg",
+      "likes": 0,
+      "categoryId": "1",
+      "userId": "4",
+      "id": 9
     }
   ]
 }
