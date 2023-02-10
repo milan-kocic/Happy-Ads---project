@@ -69,14 +69,22 @@
               <option value="showAll">Select Category</option>
             </select>
             <input
-              type="text"
-              placeholder="Enter Keyword here..."
+              type="number"
+              placeholder="Price from..."
               class="input-search searchs"
+              id="value-from"
+            />
+            <input
+              type="number"
+              placeholder="Price to..."
+              class="input-search searchs"
+              id="value-to"
             />
             <input
               type="button"
               value="Search"
               class="input-search button-search"
+              id="btn-search"
             />
           </div>
         </div>
@@ -84,13 +92,19 @@
       <section class="container-search">
         <div class="section-showads">
           <div class="container-results">
-            <p class="search-results">Showing 24 results</p>
-            <div class="sorting-search">
+            <p class="search-results">Showing <span id="card-show-result">24</span> results</p>
+            <!-- <div class="sorting-search"> -->
               <!-- <label for="">Sort by price</label> -->
-              <select class="price-select" name="" id="">
-                <option value="">Sort by price</option>
+              <!-- <select class="price-select" name="" id="price-select">
+                <option value="showAll">Sort by price</option>
+                <option value="1">1-50</option>
+                <option value="2">51-100</option>
+                <option value="3">101-500</option>
+                <option value="4">501-1000</option>
+                <option value="5">1001-10000</option>
+                <option value="6">more than 10000</option>
               </select>
-            </div>
+            </div> -->
           </div>
           <div class="no-results hidden">No results found</div>
           <!-- <div class="results"> -->

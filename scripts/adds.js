@@ -2,11 +2,14 @@ import { getAds, getCategories, getUsers, checkFields } from './script.js';
 
 let categories;
 let ads;
+let users;
 async function loadData() {
   ads = await getAds();
   showCards(ads);
-  await getCategories();
+  categories = await getCategories();
   showAdSelect(categories);
+  users = await getUsers();
+  showLocationSelect(users);
 }
 
 async function showCards(ads) {
@@ -42,8 +45,6 @@ async function showCards(ads) {
     namePrg.innerText = ad.title;
 
     const likesPrg = document.createElement('p');
-    const likesSpan = document.createElement('span');
-
     cardInfoDiv.appendChild(likesPrg);
     likesPrg.classList = 'product-likes';
     likesPrg.innerHTML = `${ad.likes}  <i class="bx bxs-like" style="color: #51cf66"> `;
@@ -74,6 +75,16 @@ function showAdSelect(categories) {
     option.value = category.id;
   }
 }
+const selectLocation = document.getElementById('select-location');
+function showLocationSelect(users) {
+  for (let user of users) {
+    const option = document.createElement('option');
+    selectLocation.appendChild(option);
+    option.innerText = user.city;
+    option.value = user.id;
+  }
+}
+
 select.addEventListener('change', async function (e) {
   if (e.target.value === 'showAll') {
     showCards(ads);
@@ -84,5 +95,33 @@ select.addEventListener('change', async function (e) {
     showCards(filteredAds);
   }
 });
+selectLocation.addEventListener('change', async function (e) {
+  if (e.target.value === 'showAll') {
+    showCards(ads);
+  } else {
+    const userId = document.getElementById('select-location').value;
+    const filteredAds = ads.filter((n) => n.userId == userId);
+
+    showCards(filteredAds);
+  }
+});
+const btnSearch = document.getElementById('btn-search');
+const inputValueFrom = document.getElementById('value-from');
+const inputValueTo = document.getElementById('value-to');
+
+btnSearch.addEventListener('click', function () {
+  console.log(ads);
+  const filteredAds = ads.filter(
+    (n) =>
+      n.userId == selectLocation.value &&
+      n.categoryId == select.value &&
+      n.price >= inputValueFrom.value &&
+      n.price < inputValueTo.value
+  );
+  console.log(filteredAds);
+  showCards(filteredAds);
+});
+
+// const numberOfCards = document.getElementById('card-show-result');
 
 window.addEventListener('load', loadData);

@@ -25,6 +25,12 @@ body {
   --error-color: #cf000f;
   --succes-color: rgba(105, 221, 157, 0.712);
 }
+input[type='number']::-webkit-inner-spin-button {
+  display: none;
+}
+input[type='number'] {
+  -moz-appearance: textfield;
+}
 
 /***********************************************************/
 /***************INDEX PAGE**********************************/
