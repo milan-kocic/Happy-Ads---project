@@ -13,11 +13,16 @@ async function loadData() {
 }
 
 async function showCards(ads) {
+  const numberOfCards = document.getElementById('card-show-result');
+  const noResult = document.getElementById('no-results');
   const cardsDiv = document.getElementById('cards');
   cardsDiv.innerHTML = '';
   categories = await getCategories();
   const users = await getUsers();
-
+  numberOfCards.innerText = ads.length;
+  if (ads.length === 0) {
+    noResult.classList.toggle('hidden');
+  }
   for (let ad of ads) {
     const adCards = document.createElement('div');
     cardsDiv.appendChild(adCards);
@@ -121,7 +126,5 @@ btnSearch.addEventListener('click', function () {
   console.log(filteredAds);
   showCards(filteredAds);
 });
-
-// const numberOfCards = document.getElementById('card-show-result');
 
 window.addEventListener('load', loadData);
