@@ -538,15 +538,30 @@ textarea::-webkit-input-placeholder {
 }
 
 .cards {
-  display: flex;
+  /* display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
   flex-wrap: wrap;
   gap: 26px;
+  padding: 30px 0 100px; */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-row-gap: 35px;
+  grid-column-gap: 25px;
   padding: 30px 0 100px;
 }
 
+.one-product {
+  width: 70%;
+  margin: 0 auto;
+}
+.ad-one-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+}
 .ad-cards {
   display: flex;
   align-items: flex-start;
@@ -568,13 +583,17 @@ textarea::-webkit-input-placeholder {
   aspect-ratio: 1/1;
   object-fit: cover;
 }
-.card-info {
+.card-info,
+.card-info2 {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   padding: 24px;
   gap: 8px;
+}
+.card-info2 {
+  gap: 16px;
 }
 .card-info p {
   overflow: hidden;
@@ -587,6 +606,10 @@ textarea::-webkit-input-placeholder {
   text-decoration: none;
   color: #333;
   transition: all 0.2s ease-out;
+}
+.product-name2 {
+  font-size: 36px;
+  font-weight: 700;
 }
 .product-name:hover {
   color: #1b8e70;
@@ -602,15 +625,38 @@ textarea::-webkit-input-placeholder {
   font-weight: 600;
   background-color: #51cf66;
 }
-.product-likes {
+.product-category2 {
+  display: inline-block;
+  padding: 8px 20px;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #333;
+  border-radius: 100px;
+  font-weight: 600;
+  background-color: #51cf66;
+}
+
+.product-likes,
+.product-likes2 {
   margin-bottom: 6px;
+}
+.product-likes2 {
+  font-size: 22px;
 }
 .product-author,
 .author-city {
   margin-bottom: 5px;
 }
+.product-author2,
+.author-city2 {
+  font-size: 18px;
+}
 .product-price {
   font-weight: 700;
+}
+.product-price2 {
+  font-size: 22px;
+  font-weight: bolder;
 }
 .product-likes,
 .product-author,
@@ -639,6 +685,10 @@ textarea::-webkit-input-placeholder {
   font-size: 15px;
   line-height: 24px;
   color: #737373;
+}
+
+.site-footer p {
+  color: #bab9b9;
 }
 .site-footer hr {
   border-top-color: #bbb;
@@ -669,12 +719,13 @@ textarea::-webkit-input-placeholder {
   display: block;
 }
 .footer-links a {
-  color: #737373;
+  color: #bab9b9;
+  cursor: pointer;
 }
 .footer-links a:active,
 .footer-links a:focus,
 .footer-links a:hover {
-  color: #3366cc;
+  color: #fff;
   text-decoration: none;
 }
 .footer-links.inline li {

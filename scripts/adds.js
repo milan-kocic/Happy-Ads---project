@@ -10,6 +10,7 @@ async function loadData() {
   showAdSelect(categories);
   users = await getUsers();
   showLocationSelect(users);
+  showFooterLinks(categories);
 }
 
 async function showCards(ads) {
@@ -49,7 +50,6 @@ async function showCards(ads) {
     cardInfoDiv.appendChild(namePrg);
     namePrg.classList = 'product-name';
     namePrg.innerText = ad.title;
-    // namePrg.href = `add-info?id=${ad.id}`;
     namePrg.href = `/html/ad-info?id=${ad.id}`;
 
     const likesPrg = document.createElement('p');
@@ -130,6 +130,17 @@ btnSearch.addEventListener('click', function () {
   console.log(filteredAds);
   showCards(filteredAds);
 });
+const footerLinks = document.getElementById('footer-links');
+function showFooterLinks(categories) {
+  for (let category of categories) {
+    const li = document.createElement('li');
+    footerLinks.appendChild(li);
+    const a = document.createElement('a');
+    li.appendChild(a);
+    a.innerText = category.name;
+    a.href = `/html/adds?id=${category.id}`;
+  }
+}
 
 window.addEventListener('load', loadData);
 

@@ -4,9 +4,65 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/image/favicon.ico" rel="icon" type="image/x-icon" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <title>Ad info</title>
   </head>
   <body>
-    <h1>AD INFO</h1>
+    <header class="container-all-ads">
+      <div class="navigation">
+        <a href="index.html" class="navigation-logo"
+          ><img
+            class="logo"
+            src="/image/logo/logo-no-background.png"
+            alt="logo"
+            srcset=""
+        /></a>
+        <nav>
+          <ul class="navigation-links">
+            <li class="navigation-link">
+              <a href="/index.html">Home</a>
+            </li>
+            <li class="navigation-link">
+              <a href="adds.html">Ads</a>
+            </li>
+            <li class="navigation-link">
+              <a href="registration.html">About Us</a>
+            </li>
+            <li class="navigation-link">
+              <a href="registration.html">Contact</a>
+            </li>
+            <li class="navigation-link">
+              <a href="registration.html">Registration</a>
+            </li>
+            <li class="navigation-link">
+              <a href="log-in.html">Log In</a>
+            </li>
+          </ul>
+        </nav>
+
+        <a href="/html/log-in.html" class="btn-post-ads"
+          ><i
+            class="bx bx-plus bx-flip-horizontal bx-tada"
+            style="color: #ffffff; font-size: 22px; font-weight: bold"
+          ></i>
+          Post Your Ad</a
+        >
+      </div>
+    </header>
+    <main>
+      <section class="container-search one-ad">
+        <div id="show-one-ad" class="one-product"></div>
+      </section>
+    </main>
+    <script src="/scripts/ad-info.js" type="module"></script>
   </body>
 </html>

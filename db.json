@@ -222,5 +222,47 @@
       "userId": "4",
       "id": 9
     }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo accusantium voluptates quaerat. Voluptatem facilis blanditiis iure animi laborum velit laboriosam tempore nemo cum rerum ut reiciendis quas quisquam, delectus fugit!",
+      "adId": 1
+    },
+    {
+      "id": 2,
+      "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo accusantium voluptates quaerat. Voluptatem facilis blanditiis iure animi laborum velit laboriosam tempore nemo cum rerum ut reiciendis quas quisquam, delectus fugit!",
+      "adId": 5
+    },
+    {
+      "id": 3,
+      "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo accusantium voluptates quaerat. Voluptatem facilis blanditiis iure animi laborum velit laboriosam tempore nemo cum rerum ut reiciendis quas quisquam, delectus fugit!",
+      "adId": 2
+    },
+    {
+      "id": 4,
+      "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo accusantium voluptates quaerat. Voluptatem facilis blanditiis iure animi laborum velit laboriosam tempore nemo cum rerum ut reiciendis quas quisquam, delectus fugit!",
+      "adId": 1
+    },
+    {
+      "id": 5,
+      "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo accusantium voluptates quaerat. Voluptatem facilis blanditiis iure animi laborum velit laboriosam tempore nemo cum rerum ut reiciendis quas quisquam, delectus fugit!",
+      "adId": 3
+    },
+    {
+      "id": 6,
+      "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo accusantium voluptates quaerat. Voluptatem facilis blanditiis iure animi laborum velit laboriosam tempore nemo cum rerum ut reiciendis quas quisquam, delectus fugit!",
+      "adId": 4
+    },
+    {
+      "id": 7,
+      "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo accusantium voluptates quaerat. Voluptatem facilis blanditiis iure animi laborum velit laboriosam tempore nemo cum rerum ut reiciendis quas quisquam, delectus fugit!",
+      "adId": 5
+    },
+    {
+      "id": 8,
+      "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo accusantium voluptates quaerat. Voluptatem facilis blanditiis iure animi laborum velit laboriosam tempore nemo cum rerum ut reiciendis quas quisquam, delectus fugit!",
+      "adId": 6
+    }
   ]
 }
