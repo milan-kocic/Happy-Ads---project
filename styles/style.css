@@ -28,9 +28,9 @@ body {
 input[type='number']::-webkit-inner-spin-button {
   display: none;
 }
-input[type='number'] {
+/* input[type='number'] {
   -moz-appearance: textfield;
-}
+} */
 
 /***********************************************************/
 /***************INDEX PAGE**********************************/
@@ -563,6 +563,7 @@ textarea::-webkit-input-placeholder {
   transform: translateY(-12px);
   box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.06);
 }
+
 .product-image {
   aspect-ratio: 1/1;
   object-fit: cover;
@@ -582,6 +583,14 @@ textarea::-webkit-input-placeholder {
   font-size: 22px;
   font-weight: 700;
   margin-bottom: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #333;
+  transition: all 0.2s ease-out;
+}
+.product-name:hover {
+  color: #1b8e70;
+  text-decoration: underline #1b8e70;
 }
 .product-category {
   display: inline-block;
@@ -619,6 +628,7 @@ textarea::-webkit-input-placeholder {
 .flex-card i {
   align-self: center;
 }
+
 /*************************************************************/
 /******************** FOOTER *********************************/
 /*************************************************************/

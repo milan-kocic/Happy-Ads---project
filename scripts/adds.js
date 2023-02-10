@@ -1,4 +1,4 @@
-import { getAds, getCategories, getUsers, checkFields } from './script.js';
+import { getAds, getCategories, getUsers } from './script.js';
 
 let categories;
 let ads;
@@ -15,14 +15,15 @@ async function loadData() {
 async function showCards(ads) {
   const numberOfCards = document.getElementById('card-show-result');
   const noResult = document.getElementById('no-results');
+  if (ads.length === 0) {
+    noResult.classList.toggle('hidden');
+  }
   const cardsDiv = document.getElementById('cards');
   cardsDiv.innerHTML = '';
   categories = await getCategories();
   const users = await getUsers();
   numberOfCards.innerText = ads.length;
-  if (ads.length === 0) {
-    noResult.classList.toggle('hidden');
-  }
+
   for (let ad of ads) {
     const adCards = document.createElement('div');
     cardsDiv.appendChild(adCards);
@@ -44,10 +45,12 @@ async function showCards(ads) {
     const category = categories.find((n) => n.id == ad.categoryId);
     categoryPrg.innerText = category.name;
 
-    const namePrg = document.createElement('p');
+    const namePrg = document.createElement('a');
     cardInfoDiv.appendChild(namePrg);
     namePrg.classList = 'product-name';
     namePrg.innerText = ad.title;
+    // namePrg.href = `add-info?id=${ad.id}`;
+    namePrg.href = `/html/ad-info?id=${ad.id}`;
 
     const likesPrg = document.createElement('p');
     cardInfoDiv.appendChild(likesPrg);
@@ -71,6 +74,7 @@ async function showCards(ads) {
     pricePrg.innerHTML = `${ad.price} <i class='bx bx-euro' style='color:#51cf66'>`;
   }
 }
+
 const select = document.getElementById('select-category');
 function showAdSelect(categories) {
   for (let category of categories) {
@@ -128,3 +132,5 @@ btnSearch.addEventListener('click', function () {
 });
 
 window.addEventListener('load', loadData);
+
+// window.open(`add-info?id=${id}`, '_self');
