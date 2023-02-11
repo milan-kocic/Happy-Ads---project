@@ -143,14 +143,14 @@
       "id": 1
     },
     {
-      "id": 2,
       "title": "Sneakers",
       "description": "Our shoes are made for walking. For running. For chasing. For dancing. ",
       "price": 2500,
       "image": "https://images.unsplash.com/photo-1549298916-f52d724204b4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fHNuZWFrZXJzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
-      "likes": 5,
+      "likes": 7,
       "categoryId": 3,
-      "userId": 2
+      "userId": 2,
+      "id": 2
     },
     {
       "title": "Laptop bag",
@@ -197,7 +197,7 @@
       "description": "Quick, Easy Touch-Ups – Schick Hydro Silk Touch-Up is a versatile beauty tool that shapes eyebrows, removes fine hairs and even smooths skin by gently exfoliating.",
       "price": 5,
       "image": "https://m.media-amazon.com/images/I/71DWrr20pIL._SL1500_.jpg",
-      "likes": 0,
+      "likes": 10,
       "categoryId": "8",
       "userId": "6",
       "id": 7

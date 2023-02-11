@@ -1,4 +1,4 @@
-import { getAdsById, getUsers, getCategories } from './script.js';
+import { getAdsById, getUsers, getCategories, updateAd } from './script.js';
 
 const search = window.location.search;
 const part = search.split('=');
@@ -23,7 +23,7 @@ async function showAd(ad) {
   adCards.appendChild(imageCards);
   imageCards.style.borderRadius = '8px';
   imageCards.style.width = '60%';
-  imageCards.classList = 'product-image';
+  imageCards.classList = 'product-image2';
   imageCards.src = ad.image;
 
   const cardInfoDiv = document.createElement('div');
@@ -53,11 +53,26 @@ async function showAd(ad) {
   likesPrg.classList = 'product-likes2';
   likesPrg.innerHTML = `${ad.likes}  <i class="bx bxs-like" style="color: #51cf66"> `;
 
+  btnLike.addEventListener('click', async function () {
+    const updatedLikes = ++ad.likes;
+    likesPrg.innerHTML = `${updatedLikes}  <i class="bx bxs-like" style="color: #51cf66"> `;
+
+    await updateAd(
+      id,
+      ad.title,
+      ad.description,
+      ad.price,
+      ad.image,
+      updatedLikes,
+      ad.categoryId,
+      ad.userId
+    );
+  });
+
   const authorPrg = document.createElement('p');
   cardInfoDiv.appendChild(authorPrg);
   authorPrg.classList = 'product-author2';
   const user = users.filter((n) => n.id == ad.userId);
-
   authorPrg.innerHTML = `${user[0].firstName} ${user[0].lastName} <i class='bx bxs-user' style='color:#51cf66'>`;
 
   const cityPrg = document.createElement('p');

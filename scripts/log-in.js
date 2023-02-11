@@ -28,3 +28,7 @@ async function login(e) {
     window.open(`admin?id=${id}`, '_self');
   }
 }
+const btnReg = document.getElementById('btn-reg');
+btnReg.addEventListener('click', function () {
+  window.open(`/html/registration .html`, '_self');
+});
