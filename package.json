@@ -1,0 +1,19 @@
+{
+  "name": "happy-ads",
+  "version": "1.0.0",
+  "description": "my student project",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/milan-kocic/Happy-Ads---project.git"
+  },
+  "author": "Milan Kocic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/milan-kocic/Happy-Ads---project/issues"
+  },
+  "homepage": "https://github.com/milan-kocic/Happy-Ads---project#readme"
+}
