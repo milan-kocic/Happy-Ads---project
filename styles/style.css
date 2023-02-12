@@ -44,6 +44,49 @@ input[type='number']::-webkit-inner-spin-button {
   max-width: 90%;
   margin: 0 auto;
 }
+.container-comments {
+  margin: 100px auto;
+  width: 1200px;
+  max-width: 90%;
+  background-color: #fafafa;
+}
+.comments {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  justify-content: center;
+  align-items: center;
+  grid-row-gap: 25px;
+  padding: 30px 18px 100px;
+  background-color: #fafafa;
+  padding: 20px 30px;
+  color: hsl(147, 19%, 25%);
+  font-weight: 600;
+  font-size: 18px;
+}
+.comment {
+  padding: 20px 30px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.container-about {
+  width: 1200px;
+  max-width: 90%;
+  margin: 30px auto;
+  height: 100vh;
+  padding: 160px 50px;
+}
+.container-about h1 {
+  margin-bottom: 50px;
+  color: hsl(146, 26%, 23%);
+  font-weight: 500;
+  font-size: 26px;
+}
+.container-about p {
+  font-size: 20px;
+  line-height: 1.6;
+}
+
 .body {
   background-color: #fafafa;
 }
@@ -122,26 +165,36 @@ input[type='number']::-webkit-inner-spin-button {
 }
 .categories {
   display: grid;
-  grid-template-columns: repeat(3, 30%);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(4, 1fr);
   justify-content: center;
   grid-row-gap: 35px;
   grid-column-gap: 25px;
   padding: 30px 18px 100px;
-
-  height: 100%;
 }
 .flex-category {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 16px;
-  border: 2px solid black;
+  gap: 6px;
+
+  border: 2px solid #4edcb6;
+}
+.flex-category a {
+  color: #2f4f4f;
+  font-weight: 700;
+  font-size: 22px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s ease-in;
+}
+.flex-category a:hover {
+  color: #4edcb6;
 }
 .flex-category img {
   width: 80%;
-  height: 60%;
+  height: 50%;
 }
 
 /******************************************************/
@@ -225,7 +278,7 @@ input[type='number']::-webkit-inner-spin-button {
   gap: 20px;
 }
 /***********************************************************************/
-/********REGISTRATION AND LOGIN PAGE************************************/
+/******** REGISTRATION AND LOGIN PAGE **********************************/
 /**********************************************************************/
 .body-registration,
 .body-login,
@@ -310,7 +363,9 @@ textarea::-webkit-input-placeholder {
 .form-control .login input {
   padding: 20px;
 }
-
+.form-control.login {
+  padding-bottom: 22px;
+}
 .gender,
 .admin {
   display: flex;
@@ -353,7 +408,7 @@ textarea::-webkit-input-placeholder {
   visibility: visible;
 }
 /*********************************************************/
-/******************SELECT - CATEGORIES**********************/
+/****************** SELECT - CATEGORIES ******************/
 /********************************************************/
 
 .category-select {

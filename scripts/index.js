@@ -12,10 +12,11 @@ function showCategories(categories) {
     const divCards = document.createElement('div');
     divCategories.appendChild(divCards);
 
-    const divCard = document.createElement('div');
+    const divCard = document.createElement('a');
     divCards.appendChild(divCard);
     divCards.classList = 'flex-category';
     divCard.innerHTML = category.name;
+    divCard.href = `/html/adds`;
 
     const img = document.createElement('img');
     divCards.appendChild(img);
