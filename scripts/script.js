@@ -11,6 +11,16 @@ function checkFields(arrFields) {
   });
   return valid;
 }
+function checkField(element) {
+  let valid = true;
+  if (element.value.trim() === '') {
+    showError(element, `${getInputName(element)} is required.`);
+    valid = false;
+  } else {
+    showSucces(element);
+  }
+  return valid;
+}
 function showError(input, message) {
   const formControl = input.parentElement;
   formControl.classList = 'form-control error';
@@ -78,6 +88,7 @@ async function addNewUser(
   const user = await response.json();
   return user;
 }
+
 async function addNewCategory(name, image) {
   const response = await fetch(`http://localhost:3000/categories`, {
     method: 'POST',
@@ -117,6 +128,18 @@ async function addNewAd(
   return ad;
 }
 
+async function addComment(text, adId) {
+  const response = await fetch(`http://localhost:3000/comments`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      text,
+      adId,
+    }),
+  });
+  const comment = await response.json();
+  return comment;
+}
 async function getUserByUsernameAndPass(username, password) {
   const response = await fetch(
     `http://localhost:3000/users?username=${username}&password=${password}`,
@@ -140,6 +163,20 @@ async function getUsers() {
   });
   const products = await response.json();
   return products;
+}
+async function getComments() {
+  const response = await fetch('http://localhost:3000/comments', {
+    method: 'GET',
+  });
+  const comments = await response.json();
+  return comments;
+}
+async function getCommentsByAdId(id) {
+  const response = await fetch(`http://localhost:3000/comments?adId=${id}`, {
+    method: 'GET',
+  });
+  const comments = await response.json();
+  return comments;
 }
 async function updateUser(
   id,
@@ -186,6 +223,21 @@ async function updateCategory(id, name, image) {
     body: JSON.stringify({
       name,
       image,
+    }),
+  });
+  const product = await response.json();
+  return product;
+}
+async function updateComment(id, text, adId) {
+  const response = await fetch(`http://localhost:3000/comments/${id}`, {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+
+    body: JSON.stringify({
+      text,
+      adId,
     }),
   });
   const product = await response.json();
@@ -281,6 +333,7 @@ async function deleteAd(id) {
 
 export {
   checkFields,
+  checkField,
   showError,
   showSucces,
   getInputName,
@@ -302,4 +355,7 @@ export {
   deleteAd,
   updateAd,
   addNewAd,
+  getComments,
+  getCommentsByAdId,
+  addComment,
 };

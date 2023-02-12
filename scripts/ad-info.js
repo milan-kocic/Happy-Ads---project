@@ -1,4 +1,13 @@
-import { getAdsById, getUsers, getCategories, updateAd } from './script.js';
+import {
+  getAdsById,
+  getUsers,
+  getCategories,
+  updateAd,
+  getCommentsByAdId,
+  addComment,
+  checkField,
+  showError,
+} from './script.js';
 
 const search = window.location.search;
 const part = search.split('=');
@@ -7,6 +16,10 @@ let id = part[1];
 async function loadData() {
   const ad = await getAdsById(id);
   showAd(ad);
+
+  const commentByAdId = await getCommentsByAdId(id);
+
+  showComments(commentByAdId);
 }
 
 const adDiv = document.getElementById('show-one-ad');
@@ -84,6 +97,29 @@ async function showAd(ad) {
   cardInfoDiv.appendChild(pricePrg);
   pricePrg.classList = 'product-price2';
   pricePrg.innerHTML = `${ad.price} <i class='bx bx-euro' style='color:#51cf66'>`;
+}
+
+const textComment = document.getElementById('comment');
+const btnComment = document.getElementById('btn-post');
+
+btnComment.addEventListener('click', async function (e) {
+  e.preventDefault();
+
+  if (!checkField(textComment)) {
+    return;
+  } else {
+    await addComment(textComment.value, id);
+    window.open(`ad-info?id=${id}`, '_self');
+  }
+});
+const divComments = document.getElementById('div-comments');
+function showComments(comments) {
+  for (let comment of comments) {
+    const divComment = document.createElement('div');
+    divComments.appendChild(divComment);
+    divComment.classList = 'comment';
+    divComment.innerText = `"${comment.text}"`;
+  }
 }
 
 window.addEventListener('load', loadData);

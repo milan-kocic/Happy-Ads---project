@@ -302,5 +302,9 @@ const btnAd = document.getElementById('btn-page-ads');
 btnAd.addEventListener('click', function () {
   window.open(`adds?id=${id}`, '_self');
 });
+const btnLogout = document.getElementById('log-out');
+btnLogout.addEventListener('click', function () {
+  window.open(`/index?id=${id}`, '_self');
+});
 
 window.addEventListener('load', loadData);
