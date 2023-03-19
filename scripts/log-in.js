@@ -30,5 +30,5 @@ async function login(e) {
 }
 const btnReg = document.getElementById('btn-reg');
 btnReg.addEventListener('click', function () {
-  window.open(`/html/registration .html`, '_self');
+  window.open(`/html/registration.html`, '_self');
 });

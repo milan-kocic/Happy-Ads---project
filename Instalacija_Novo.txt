@@ -1,0 +1,26 @@
+Instalacija node server:
+    Skinuti software i instalirati ga: https://nodejs.org/en/download/
+    Proverite da li ste uspesno instalirali u terminalu: npm -v
+
+Instalacija za http server:
+    Iz terminala pomocu komande: 
+    npm install -g http-server
+
+Instalacija za json server:
+    Iz terminala pomocu komande: 
+    npm install -g json-server
+
+Pokretanje http servera:
+    U folderu gde je projekat iz terminala pomocu komande: 
+    http-server -c-1
+    Nakon pokretanja, aplikaciji pristupamo unoseci u pretrazivacu: localhost:8080
+
+Pokretanje json servera:
+    U folderu gde je projekat iz terminala pomocu komande:
+    json-server --watch db.json
+
+
+Ako dodje do greske, verovatno treba i ovaj korak:
+Otvoriti PowerShell kao administrator (desni klik na PowerShell i Run as administrator) 
+onda ukucati naredbu: Set-ExecutionPolicy -ExecutionPolicy Unrestricted
+kada izadje: Do you want to change the execution policy? - otkucati: y

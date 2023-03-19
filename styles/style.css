@@ -414,7 +414,7 @@ textarea::-webkit-input-placeholder {
 .form-control small {
   color: var(--error-color);
   position: absolute;
-  bottom: -1;
+  bottom: 0;
   left: 10px;
   visibility: hidden;
   /* margin-bottom: 1px; */

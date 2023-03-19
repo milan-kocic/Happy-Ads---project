@@ -1,24 +1,26 @@
 {
   "name": "happy-ads---project",
   "version": "1.0.0",
-  "description": "my student project",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "json-server --watch db.json"
+    
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/milan-kocic/Happy-Ads---project.git"
   },
-  "author": "Milan K",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/milan-kocic/Happy-Ads---project/issues"
   },
   "homepage": "https://github.com/milan-kocic/Happy-Ads---project#readme",
   "dependencies": {
-    "http-server": "^14.1.1",
-    "json-server": "^0.17.1",
-    "save": "^2.9.0"
+    "json-server": "0.17.1",
+    "http-server": "14.1.1"
   }
 }
