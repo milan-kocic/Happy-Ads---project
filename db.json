@@ -27,19 +27,6 @@
       "id": 2
     },
     {
-      "firstName": "Miloš",
-      "lastName": "Živković",
-      "username": "misa80",
-      "password": "000000",
-      "email": "misa80@gmail.com",
-      "adress": "Kralja Milana 15",
-      "city": "Novi Sad",
-      "phoneNumber": "0646658737",
-      "gender": "M",
-      "admin": false,
-      "id": 3
-    },
-    {
       "firstName": "Aleksandar",
       "lastName": "Đorđević",
       "email": "aca95@gmai.com",
@@ -163,36 +150,6 @@
       "id": 2
     },
     {
-      "title": "Laptop bag",
-      "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop.",
-      "price": 2500,
-      "image": "https://www.n-sport.net/UserFiles/products/big/05/31/muska-torba-tommy-hilfiger-essential-pu-computer-bag-AM0AM09507-BDS.jpg",
-      "likes": 8,
-      "categoryId": "6",
-      "userId": "3",
-      "id": 3
-    },
-    {
-      "title": "VW Golf 4 1.9tdi",
-      "description": "Auto je u izuzetnom stanju, ocuvan i spolja i unutra. Mehanicki bez greske, dobre zimske gume.",
-      "price": 2690,
-      "image": "https://gcdn.polovniautomobili.com/user-images/thumbs/2118/21186193/5240aa8be6cb-1920x1080.jpg",
-      "likes": 5,
-      "categoryId": "1",
-      "userId": "3",
-      "id": 4
-    },
-    {
-      "title": "ŽIVOT, LITERATURA...",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi ",
-      "price": 6,
-      "image": "https://knjigeobradovic.com/wp-content/uploads/2023/02/ZIVOT-LITERATURA-DANILO-KIS.jpg",
-      "likes": 0,
-      "categoryId": "10",
-      "userId": "3",
-      "id": 5
-    },
-    {
       "title": "COSRX Snail Mucin",
       "description": "The Real Snail Essence: Formulated with 96.3% Snail Secretion Filtrate, this essence repairs and rejuvenates the skin from dryness and aging. It improves skin vitality by reducing dullness and soothing dehydrated skin.",
       "price": 39,
@@ -217,7 +174,7 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi ",
       "price": 209900,
       "image": "https://gcdn.polovniautomobili.com/user-images/thumbs/2087/20873741/29619952d90d-1920x1080-dw.jpg",
-      "likes": 0,
+      "likes": 6,
       "categoryId": "1",
       "userId": "4",
       "id": 8
@@ -273,6 +230,11 @@
       "id": 8,
       "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo accusantium voluptates quaerat. Voluptatem facilis blanditiis iure animi laborum velit laboriosam tempore nemo cum rerum ut reiciendis quas quisquam, delectus fugit!",
       "adId": 6
+    },
+    {
+      "text": "fgfghfhgfhg",
+      "adId": "8",
+      "id": 9
     }
   ]
 }
